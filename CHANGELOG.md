@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.1.1 (2023-06-28)
+
+### Fix
+
+* **dependencies:** Upgrade hyfi to 0.15.0 ([`cc9463b`](https://github.com/entelecheia/corporate-reputation/commit/cc9463b3114cbfc31603da961338bd2900b2aaa1))
+
 ## v0.1.0 (2023-06-07)
 
 ### Feature
