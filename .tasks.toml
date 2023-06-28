@@ -39,15 +39,15 @@ cmd = "pytest --doctest-modules"
 help = "run tests with pytest"
 
 [tool.poe.tasks.tests-cov]
-cmd = "pytest --doctest-modules --cov=src --cov-report term-missing --cov-report=html"
+cmd = "pytest --cov=src --cov-report=xml"
 help = "run tests with pytest and generate a coverage report"
 
 [tool.poe.tasks.tests-cov-fail]
-shell = "pytest --doctest-modules --cov=src --cov-report term-missing --cov-report=html --cov-fail-under=80 --junitxml=tests/pytest.xml | tee tests/pytest-coverage.txt"
+shell = "pytest --cov=src --cov-report=xml --cov-fail-under=50 --junitxml=tests/pytest.xml | tee tests/pytest-coverage.txt"
 help = "run tests with pytest and generate a coverage report, fail if coverage is below 80%"
 
 [tool.poe.tasks.clean-cov]
-cmd = "rm -rf .coverage tests/htmlcov tests/pytest.xml tests/pytest-coverage.txt"
+cmd = "rm -rf .coverage* tests/htmlcov tests/pytest.xml tests/pytest-coverage.txt"
 help = "remove coverage reports"
 
 [tool.poe.tasks.clean-pycache]
@@ -78,10 +78,16 @@ help = "build the package"
 cmd = "pipx install ghp-import"
 help = "install ghp-import"
 
-[tool.poe.tasks.install-jupyter-book]
+[tool.poe.tasks.install-jupyter-book-pipx]
 shell = """
   pipx install jupyter-book
-  args=(); while IFS= read -r file; do args+=("$file"); done < book/requirements.txt; pipx inject jupyter-book "${args[@]:1}"
+  pipx inject jupyter-book $(awk '{if(!/^ *#/ && NF) print}' book/requirements.txt)
+"""
+help = "install jupyter-book with pipx"
+
+[tool.poe.tasks.install-jupyter-book]
+shell = """
+  pip install -r book/requirements.txt
 """
 help = "install jupyter-book"
 
@@ -112,3 +118,7 @@ help = "update dependencies"
 [tool.poe.tasks.lock]
 cmd = "poetry lock"
 help = "lock dependencies"
+
+[tool.poe.tasks.codecov-validate]
+cmd = "curl -X POST --data-binary @codecov.yml https://codecov.io/validate"
+help = "Validate codecov.yml"

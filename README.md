@@ -4,9 +4,12 @@
 [![version-image]][release-url]
 [![release-date-image]][release-url]
 [![license-image]][license-url]
+[![codecov][codecov-image]][codecov-url]
 [![jupyter-book-image]][docs-url]
 
 <!-- Links: -->
+[codecov-image]: https://codecov.io/gh/entelecheia/corporate-reputation/branch/main/graph/badge.svg?token=[REPLACE_ME]
+[codecov-url]: https://codecov.io/gh/entelecheia/corporate-reputation
 [pypi-image]: https://img.shields.io/pypi/v/corporate-reputation
 [license-image]: https://img.shields.io/github/license/entelecheia/corporate-reputation
 [license-url]: https://github.com/entelecheia/corporate-reputation/blob/main/LICENSE
