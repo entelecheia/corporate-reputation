@@ -1,0 +1,15 @@
+# directory names
+inputs: inputs
+outputs: outputs
+archive: archive
+datasets: datasets
+models: models
+modules: modules
+library: libs
+logs: logs
+cache: .cache
+tmp: tmp
+# to reuse the same config file for different runs
+config_dirname: configs
+config_yaml: config.yaml
+config_json: config.json
