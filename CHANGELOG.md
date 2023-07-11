@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.1.2 (2023-07-11)
+
+### Fix
+
+* **dependencies:** Upgrade hyfi to 1.2.2 ([`dfdc822`](https://github.com/entelecheia/corporate-reputation/commit/dfdc8228ae24c3929d0e47d3521313efbd077f64))
+
 ## v0.1.1 (2023-06-28)
 
 ### Fix
