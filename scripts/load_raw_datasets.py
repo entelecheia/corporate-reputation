@@ -2,10 +2,10 @@
 # # Preprocessing Datasets
 #
 # %%
-from corprep import HyFI  # type: ignore
-from ekonlpy.tag import Mecab  # type: ignore
 from datasets import Dataset
+from ekonlpy.tag import Mecab  # type: ignore
 
+from corprep import HyFI  # type: ignore
 
 prj = HyFI.init_project(
     project_name="esg-coverage",
