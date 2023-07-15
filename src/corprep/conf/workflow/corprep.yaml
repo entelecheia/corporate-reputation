@@ -1,0 +1,11 @@
+defaults:
+  - __init__
+  - /task@ds_task: datasets
+  - override /project: corprep
+
+name: corprep
+verbose: true
+tasks:
+  - ds_task
+
+
