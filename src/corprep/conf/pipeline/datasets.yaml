@@ -1,0 +1,12 @@
+defaults:
+  - __init__
+  - /pipe@pipe1: save_raw_dataset
+
+use_task_as_initial_object: true
+steps:
+  - uses: pipe1
+    with:
+      raw_dataset_dir:
+      dataset_path:
+      verbose: true
+    verbose: true
