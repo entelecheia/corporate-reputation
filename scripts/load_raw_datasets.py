@@ -11,6 +11,7 @@ prj = HyFI.init_project(
     project_name="esg-coverage",
     task_name="datasets",
     project_root=HyFI.find_dotenv_dir(usecwd=True),
+    global_hyfi_root="/",
     log_level="DEBUG",
     verbose=True,
 )
@@ -32,7 +33,12 @@ dataset = HyFI.load_dataset("json", data_files=raw_data_files)
 ds_train: Dataset = dataset["train"]  # type: ignore
 print(f"Number of training samples: {len(ds_train)}")
 # %%
+# Save the processed dataset to disk
 print(ds_train.features)
+
+processed_ds_path = prj.path.dataset_dir / "processed" / "daum_news_20230707"
+ds_train.save_to_disk(processed_ds_path)
+
 # %%
 text = ds_train["bodyText"][0]
 print(text)
