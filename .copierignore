@@ -7,3 +7,5 @@ src/corprep/conf/about/__init__.yaml
 src/corprep/_version.py
 src/corprep/__init__.py
 tests/corprep/test_cli.py
+book/_toc.yml
+.gitignore
