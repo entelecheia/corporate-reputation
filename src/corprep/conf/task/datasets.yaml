@@ -1,0 +1,9 @@
+defaults:
+  - __init__
+  - /pipeline@pipeline1: __test_general__
+
+_config_name_: datasets
+task_name: datasets
+verbose: true
+pipelines:
+  - pipeline1
