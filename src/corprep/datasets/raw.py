@@ -1,6 +1,8 @@
 from pathlib import Path
 from typing import Union
 
+from datasets import Dataset
+
 from corprep import HyFI  # type: ignore
 
 logger = HyFI.getLogger(__name__)
