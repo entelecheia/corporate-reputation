@@ -455,9 +455,9 @@ document.write(`
     <span class="n">HyFI</span><span class="o">.</span><span class="n">mount_google_drive</span><span class="p">()</span>
 
 <span class="n">prj</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">init_project</span><span class="p">(</span>
-    <span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;esg-coverage&quot;</span><span class="p">,</span>
-    <span class="n">task_name</span><span class="o">=</span><span class="s2">&quot;datasets&quot;</span><span class="p">,</span>
+    <span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;corporate-reputation&quot;</span><span class="p">,</span>
     <span class="n">project_root</span><span class="o">=</span><span class="n">HyFI</span><span class="o">.</span><span class="n">dotenv</span><span class="p">()</span><span class="o">.</span><span class="n">DOTENV_DIR</span> <span class="ow">or</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span>
+    <span class="n">global_workspace_name</span><span class="o">=</span><span class="s2">&quot;workspace&quot;</span><span class="p">,</span>
     <span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
     <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
@@ -468,18 +468,34 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/yj.lee/.venvs/corporate-reputation/lib/python3.8/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
-  from .autonotebook import tqdm as notebook_tqdm
-INFO:hyfi.composer:Composing `ProjectConfig` class with `__init__` config in `project` group.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.composer:Composing `ProjectConfig` class with `__init__` config in `project` group.
 INFO:hyfi.composer:Composing `JobLibConfig` class with `__init__` config in `joblib` group.
 INFO:hyfi.composer:Composing `PathConfig` class with `__init__` config in `path` group.
-INFO:hyfi.joblib:initialized batcher with &lt;hyfi.joblib.batch.batcher.Batcher object at 0x7f7a101dce20&gt;
+INFO:hyfi.joblib:initialized batcher with &lt;hyfi.joblib.batch.batcher.Batcher object at 0x7f372c77b610&gt;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project directory: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/corporate-reputation
-project workspace directory: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/corporate-reputation/workspace
- /mnt/nvme1n1p2/home/yj.lee/workspace/projects/corporate-reputation
-project workspace directory: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/corporate-reputation/workspace
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project directory: /raid/cis/yjlee/workspace/projects/corporate-reputation
+project workspace directory: /raid/cis/yjlee/workspace/projects/corporate-reputation/workspace
+ /raid/cis/yjlee/workspace/projects/corporate-reputation
+project workspace directory: /raid/cis/yjlee/workspace/projects/corporate-reputation/workspace
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raw_news_dir</span> <span class="o">=</span> <span class="n">prj</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">glboal_dataset_dir</span> <span class="o">/</span> <span class="s2">&quot;raw/daum_news_20230707&quot;</span>
+<span class="n">raw_data_files</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">if</span> <span class="n">raw_news_dir</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">raw_data_files</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">get_filepaths</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">raw_news_dir</span><span class="si">}</span><span class="s2">/*.dat&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">raw_data_files</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No raw data files found.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/home/yjlee/workspace/datasets/raw/daum_news_20230707/daum_news_2018.dat&#39;, &#39;/home/yjlee/workspace/datasets/raw/daum_news_20230707/daum_news_2011.dat&#39;, &#39;/home/yjlee/workspace/datasets/raw/daum_news_20230707/daum_news_2021.dat&#39;]
 </pre></div>
 </div>
 </div>

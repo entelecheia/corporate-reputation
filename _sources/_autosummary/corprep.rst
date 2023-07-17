@@ -34,4 +34,5 @@
    :recursive:
 
    corprep.conf
+   corprep.datasets
 
