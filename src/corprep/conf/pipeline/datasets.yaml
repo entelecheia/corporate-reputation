@@ -7,6 +7,6 @@ steps:
   - uses: pipe1
     with:
       raw_dataset_dir: ${__home_path__:}/workspace/datasets/raw/daum_news_20230707
-      dataset_path: processed/daum_news_20230707
+      dataset_path: datasets/processed/daum_news_20230707
       verbose: true
     verbose: true
