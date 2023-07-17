@@ -1,0 +1,6 @@
+defaults:
+  - __general_instance_methods__
+
+run: save_to_disk
+run_with:
+  dataset_path:

@@ -1,0 +1,9 @@
+defaults:
+  - __init__
+
+project_name: corporate-reputation
+project_description: Reputation Analysis of Companies and CEOs
+global_hyfi_root: ${__home_path__:}
+global_workspace_name: workspace
+num_workers: 20
+verbose: true
