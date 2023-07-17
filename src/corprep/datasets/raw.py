@@ -8,9 +8,8 @@ from corprep import HyFI  # type: ignore
 logger = HyFI.getLogger(__name__)
 
 
-def save_raw_dataset(
+def load_raw_dataset(
     raw_dataset_dir: Union[str, Path],
-    dataset_path: Union[str, Path],
     verbose: bool = False,
     **kwargs,
 ):
@@ -29,7 +28,4 @@ def save_raw_dataset(
     logger.info("Number of training samples: %d", len(ds_train))
     logger.info("Dataset features: %s", ds_train.features)
 
-    # Save the processed dataset to disk
-    ds_train.save_to_disk(dataset_path)
-    logger.info("Saved the processed dataset to %s", dataset_path)
     return ds_train
