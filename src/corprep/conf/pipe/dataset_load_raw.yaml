@@ -1,7 +1,7 @@
 defaults:
   - __general_external_funcs__
 
-run: corprep.datasets.raw.load_raw_dataset
+run: corprep.datasets.io.load_raw_dataset
 run_with:
   raw_dataset_dir:
   path: json

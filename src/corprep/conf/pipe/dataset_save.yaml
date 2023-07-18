@@ -1,6 +1,6 @@
 defaults:
-  - __general_instance_methods__
+  - __general_external_funcs__
 
-run: save_to_disk
+run: corprep.datasets.io.save_dataset
 run_with:
   dataset_path:
