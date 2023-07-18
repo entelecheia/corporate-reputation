@@ -34,3 +34,16 @@ def load_raw_dataset(
         logger.info("Dataset features: %s", ds_train.features)
 
     return ds_train
+
+
+def save_dataset(
+    data: Dataset,
+    dataset_path: Union[str, Path],
+) -> Dataset:
+    """
+    Save a dataset.
+    """
+    data.save_to_disk(dataset_path)
+    logger.info("Dataset saved to %s.", dataset_path)
+
+    return data
