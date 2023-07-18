@@ -1,0 +1,19 @@
+defaults:
+  - __init__
+  - /pipe@pipe1: dataset_load_raw
+  - /pipe@pipe3: dataset_save
+
+use_task_as_initial_object: true
+steps:
+  - uses: pipe1
+    with:
+      raw_dataset_dir: ${__home_path__:}/workspace/datasets/raw/kakao_news
+      path: parquet
+      file_pattern: "*.parquet"
+      verbose: true
+    verbose: true
+  - uses: pipe3
+    with:
+      dataset_path: datasets/processed/kakao
+      # dataset_path: datasets/processed/daum_news_20230707
+    verbose: true

@@ -1,6 +1,6 @@
 defaults:
   - __init__
-  - /pipeline@ds_pipeline: datasets
+  - /pipeline@ds_pipeline: datasets-kakao
 
 _config_name_: datasets
 task_name: datasets
