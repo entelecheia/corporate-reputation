@@ -1,5 +1,6 @@
 from datasets import Dataset
 from ekonlpy.tag import Mecab  # type: ignore
+
 from corprep import HyFI  # type: ignore
 
 logger = HyFI.getLogger(__name__)
