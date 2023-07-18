@@ -1,8 +1,8 @@
 defaults:
   - __init__
-  - /pipe@pipe1: load_raw_dataset
-  - /pipe@pipe2: tokenize_dataset
-  - /pipe@pipe3: save_dataset
+  - /pipe@pipe1: dataset_load_raw
+  - /pipe@pipe2: dataset_tokenize
+  - /pipe@pipe3: dataset_save
 
 use_task_as_initial_object: true
 steps:
