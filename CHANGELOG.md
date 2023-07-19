@@ -1,5 +1,32 @@
 <!--next-version-placeholder-->
 
+## v0.3.0 (2023-07-19)
+
+### Feature
+
+* **corprep:** Add absa-kakao pipeline configuration ([`bc1418d`](https://github.com/entelecheia/corporate-reputation/commit/bc1418d4726620d65d28865b4f079a6bd8971066))
+* **corprep:** Add absa_agent_predict configuration file ([`62ef975`](https://github.com/entelecheia/corporate-reputation/commit/62ef97578c19f0b55b58d7c5f1069701eb44a2ed))
+* **absa/prompts:** Add default.yaml configuration for TRIPLE and QUAD tasks ([`1c72bff`](https://github.com/entelecheia/corporate-reputation/commit/1c72bff6a424087023eac3f9dabfe22fd2d8de1b))
+* **corprep:** Add new absa default configuration ([`68b6a58`](https://github.com/entelecheia/corporate-reputation/commit/68b6a58e738ac3078e21c2350b1649340f109015))
+* **corprep/absa:** Add config module with API logic and data models ([`623bc76`](https://github.com/entelecheia/corporate-reputation/commit/623bc76fb9d6f9de7a59057ea33ac742ccb7dd3a))
+* **corprep/absa:** Add agent module with predict functionalities ([`1e9285b`](https://github.com/entelecheia/corporate-reputation/commit/1e9285b6dbbf9e36274dcaf0da206494043d7996))
+* **corprep/absa:** Add new file__init__.py ([`32dc886`](https://github.com/entelecheia/corporate-reputation/commit/32dc886d6d86eb530cdd96e0a31b74bc9c63a501))
+* **corprep:** Add dataset_load and absa configurations ([`f40c599`](https://github.com/entelecheia/corporate-reputation/commit/f40c59927204ee0cab7b1920bcd3e0d2222b2392))
+* **corprep:** Add absa task ([`653e525`](https://github.com/entelecheia/corporate-reputation/commit/653e525b5dc7b0ddef41bfc7f6aeed3bd772d573))
+* **corprep/datasets/io.py:** Add load_dataset function ([`3cb4294`](https://github.com/entelecheia/corporate-reputation/commit/3cb4294351b7a355a4e9b150a5972685543c177d))
+* **pipe:** Add dataset_sample and a second dataset_save to steps ([`57cc25c`](https://github.com/entelecheia/corporate-reputation/commit/57cc25cb4bf35994eec1fd0d4efa26cd890ca692))
+* **corprep:** Add sample_dataset function and related configuration ([`4b64a40`](https://github.com/entelecheia/corporate-reputation/commit/4b64a40f6866b0332439127a2687e405378fc7d0))
+* **pipeline:** Add tokenize step to datasets pipeline ([`1536430`](https://github.com/entelecheia/corporate-reputation/commit/15364302b9563cf54900bb83585de588afa2aee1))
+* **corprep:** Add new file for tokenizing dataset ([`6fb827e`](https://github.com/entelecheia/corporate-reputation/commit/6fb827e2041f063363eb32e112b28bb7dce5849b))
+* **corprep/datasets/preprocessing:** Add tokenize_dataset function ([`2db1824`](https://github.com/entelecheia/corporate-reputation/commit/2db1824baabb8ecb5afb37f7a303e4efae59970c))
+
+### Fix
+
+* **.tasks.toml:** Lower coverage fail threshold to 1% ([`b2b7718`](https://github.com/entelecheia/corporate-reputation/commit/b2b77188a10c0d4a47b3d40534358cee0df64806))
+* **corprep:** Introduce setLogger for HyFI ([`c78e6e2`](https://github.com/entelecheia/corporate-reputation/commit/c78e6e24c11d2b3bdba2053e7d9bf66df0efe60f))
+* **datasets:** Add path and file_pattern parameters to load_raw_dataset ([`2bf977b`](https://github.com/entelecheia/corporate-reputation/commit/2bf977b96c126cc165cae59079f1b5284ced584a))
+* **dependencies:** Upgrade hyfi to 1.2.14 ([`ca9ac2b`](https://github.com/entelecheia/corporate-reputation/commit/ca9ac2b1864e00bc7b9f4b896e669c573e7d0e9c))
+
 ## v0.2.0 (2023-07-17)
 
 ### Feature
