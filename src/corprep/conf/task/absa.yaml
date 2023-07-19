@@ -1,0 +1,9 @@
+defaults:
+  - __init__
+  - /pipeline@absa_pipeline: absa-kakao
+
+_config_name_: absa
+task_name: absa
+verbose: true
+pipelines:
+  - absa_pipeline
