@@ -2,16 +2,16 @@ import datetime
 import json
 import time
 from pathlib import Path
-from typing import Dict, Optional, Tuple, Any
+from typing import Any, Dict, Optional, Tuple
 
 import backoff
 import openai
 from openai.error import (
     APIConnectionError,
     APIError,
+    InvalidRequestError,
     RateLimitError,
     ServiceUnavailableError,
-    InvalidRequestError,
 )
 from pydantic import BaseModel
 
