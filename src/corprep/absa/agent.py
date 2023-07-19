@@ -35,9 +35,7 @@ def batch_predict(
     if model.verbose:
         print(model)
 
-    res = []
-    for i, text in enumerate(batch[text_col]):
-        res.append(predict_each(text, model))
+    res = [predict_each(text, model) for text in batch[text_col]]
     return {f"{task}_pred": res}
 
 
