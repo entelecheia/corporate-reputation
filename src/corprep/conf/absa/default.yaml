@@ -8,5 +8,6 @@ rate_limit_per_minute: 20
 absa_task: TRIPLE
 prompt_name: base
 temperature: 0.0
-save_filepath: outputs/preds/${.absa_task}_${.prompt_name}_${.model_name}.jsonl
+output_dir: outputs/preds
+save_filename:
 verbose: true
