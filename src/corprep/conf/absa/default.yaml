@@ -1,0 +1,12 @@
+defaults:
+  - prompts: default
+
+_target_: corprep.absa.config.AbsaConfig
+api_key:
+model_name: gpt-4-0613 # gpt-3.5-turbo-0613
+rate_limit_per_minute: 20
+absa_task: TRIPLE
+prompt_name: base
+temperature: 0.0
+save_filepath: outputs/preds/${.absa_task}_${.prompt_name}_${.model_name}.jsonl
+verbose: true
