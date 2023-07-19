@@ -11,6 +11,7 @@ from openai.error import (
     APIError,
     RateLimitError,
     ServiceUnavailableError,
+    InvalidRequestError,
 )
 from pydantic import BaseModel
 
@@ -130,5 +131,9 @@ def append_to_jsonl(data, filename: str, encoding: str = "utf-8") -> None:
 )
 def call_api(agent, args, delay_in_seconds: float = 1):
     time.sleep(delay_in_seconds)
-    response = agent.create(**args)
-    return response.choices[0].message, response.usage
+    try:
+        response = agent.create(**args)
+        return response.choices[0].message, response.usage
+    except InvalidRequestError as e:
+        logger.error(e)
+        return e, {}
