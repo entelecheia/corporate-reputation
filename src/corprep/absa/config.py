@@ -25,10 +25,10 @@ class PromptConfig(BaseModel):
     prompts: Dict[str, Dict[str, str]] = {}
 
     def get_prompt(self, task, prompt_name):
-        prompt = self.prompts.get(task, {}).get(prompt_name, "")
-        if not prompt:
+        if prompt := self.prompts.get(task, {}).get(prompt_name, ""):
+            return prompt
+        else:
             raise ValueError(f"Prompt for task {task} is not defined.")
-        return prompt
 
 
 class AbsaModel(BaseModel):
@@ -66,7 +66,7 @@ class AbsaModel(BaseModel):
     def get_prompt(self, text: str):
         task = self.absa_task
         prompt = self.prompts.get_prompt(task, self.prompt_name)
-        prompt += '\nInput text:\n"{}"\nAnswer:\n'.format(text)
+        prompt += f'\nInput text:\n"{text}"\nAnswer:\n'
         return prompt
 
     def predict(self, text: str):
@@ -130,8 +130,7 @@ def append_to_jsonl(data, filename: str, encoding: str = "utf-8") -> None:
 )
 def create_api(agent, args, delay_in_seconds: float = 1):
     time.sleep(delay_in_seconds)
-    response = agent.create(**args)
-    return response
+    return agent.create(**args)
 
 
 def call_api(agent, args, delay_in_seconds: float = 1) -> Tuple[str, dict, Any]:
