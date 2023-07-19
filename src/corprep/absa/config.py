@@ -2,7 +2,7 @@ import datetime
 import json
 import time
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Optional, Tuple, Any
 
 import backoff
 import openai
@@ -81,9 +81,8 @@ class AbsaModel(BaseModel):
             ],
         }
         delay = 60.0 / self.rate_limit_per_minute
-        response, usage = call_api(self._agent_, args, delay_in_seconds=delay)
-        response = response["content"].strip().strip("\n")
-        result = parse_response_to_json(response, usage, text)
+        content, usage, _ = call_api(self._agent_, args, delay_in_seconds=delay)
+        result = parse_response_to_json(content, usage, text)
         if self.save_filepath:
             append_to_jsonl(result, self.save_filepath)
         # remove text from result to save space
@@ -129,11 +128,12 @@ def append_to_jsonl(data, filename: str, encoding: str = "utf-8") -> None:
         ServiceUnavailableError,
     ),
 )
-def call_api(agent, args, delay_in_seconds: float = 1):
+def call_api(agent, args, delay_in_seconds: float = 1) -> Tuple[str, dict, Any]:
     time.sleep(delay_in_seconds)
     try:
         response = agent.create(**args)
-        return response.choices[0].message, response.usage
+        content = response["content"].strip().strip("\n")
+        return content, response.usage, response
     except InvalidRequestError as e:
         logger.error(e)
-        return e, {}
+        return str(e.user_message), {}, e
