@@ -1,0 +1,18 @@
+tasks:
+  TRIPLE: Triple-wise Aspect Term Extraction, Opinion Expression Extraction, and Aspect Sentiment Classification
+  QUAD: Quadruple-wise Aspect Term Extraction, Opinion Expression Extraction, Aspect Sentiment Classification, and Target Subject Extraction
+prompts:
+  TRIPLE:
+    base: |
+      We're seeking to extract information about specific facets and sentiments from the given text, particularly in relation to a company's reputation. The relevant aspects are classified into six categories: "management", "workplace", "product & service", "social", "financial", and a special category called "ownership" that relates to the conduct or image of the firm's majority shareholder.
+      There are also three types of sentiments to consider: "positive", "neutral", and "negative". Your task is to identify all aspect terms and their associated opinion terms within the text. Aspect terms are sentences or phrases in the text that denote particular characteristics or features of the company. Opinion terms, on the other hand, are adjectives or phrases in the text that articulate specific sentiments.
+      From the terms you identify, we want you to ascertain the sentiment polarity, which could be "positive", "negative", or "neutral". Please provide your answer in the format of jsonlines or a list of dictionaries, like so:
+      [{"aspect": "management", "aspect_terms": ["management"], "opinion_terms": ["good"], "sentiment": "positive"}, ...].
+      If there are no relevant terms to extract from the text, simply return an empty list, [].
+  QUAD:
+    base: |
+      We're aiming to pull out precise information from the provided text, focusing on the reputation of a specific company. There are six key aspects we're interested in: "management", "workplace", "product & service", "social", "financial", and an additional category called "ownership", which relates to the behavior or reputation of the company's primary shareholder or owner.
+      The sentiments we're focusing on fall into three types: "positive", "neutral", and "negative". Your mission is to identify all the aspect terms and their associated opinion terms present in the text. Aspect terms are sentences or phrases that specify particular characteristics or attributes of the company. Opinion terms are adjectives or phrases used to express distinct sentiments.
+      From these terms, your task is to determine the sentiment polarity, choosing from "positive", "negative", or "neutral". Importantly, we've added an extra field for the company name. So, your response should be in the format of jsonlines or a list of dictionaries, such as: 
+      [{"company": "company name", "aspect": "management", "aspect_terms": ["management"], "opinion_terms": ["good"], "sentiment": "positive"}, ...].
+      If the text does not contain any relevant details about a company, or any of the requested aspect or opinion terms, simply return an empty list, [].

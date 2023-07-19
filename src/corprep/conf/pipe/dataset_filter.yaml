@@ -1,0 +1,13 @@
+defaults:
+  - __general_external_funcs__
+
+run: corprep.datasets.preprocessing.filter.filter_dataset
+run_with:
+  num_proc: 1
+  batched: true
+  text_col: bodyText
+  verbose: ${..verbose}
+use_pipe_obj: true
+return_pipe_obj: false
+# 은는이가도과와에의등
+# [ ()\'",·]

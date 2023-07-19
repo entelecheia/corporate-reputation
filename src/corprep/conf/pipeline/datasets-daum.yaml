@@ -1,0 +1,26 @@
+defaults:
+  - __init__
+  - /pipe@pipe1: dataset_load_raw
+  - /pipe@pipe2: dataset_tokenize
+  - /pipe@pipe3: dataset_save
+
+use_task_as_initial_object: true
+steps:
+  - uses: pipe1
+    with:
+      raw_dataset_dir: ${__home_path__:}/workspace/datasets/raw/daum_news_2023
+      # raw_dataset_dir: ${__home_path__:}/workspace/datasets/raw/daum_news_20230707
+      verbose: true
+    verbose: true
+  - uses: pipe2
+    with:
+      num_proc: 100
+      batched: true
+      text_col: bodyText
+      verbose: true
+    verbose: true
+  - uses: pipe3
+    with:
+      dataset_path: datasets/processed/daum_news_2023
+      # dataset_path: datasets/processed/daum_news_20230707
+    verbose: true

@@ -1,0 +1,8 @@
+defaults:
+  - __general_external_funcs__
+
+run: corprep.datasets.io.load_dataset
+run_with:
+  dataset_path:
+  verbose: ${..verbose}
+use_pipe_obj: false

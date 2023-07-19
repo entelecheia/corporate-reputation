@@ -1,0 +1,11 @@
+defaults:
+  - __general_external_funcs__
+
+run: corprep.datasets.tokenize.tokenize_dataset
+run_with:
+  num_proc: 1
+  batched: true
+  text_col: bodyText
+  verbose: ${..verbose}
+use_pipe_obj: true
+return_pipe_obj: false
