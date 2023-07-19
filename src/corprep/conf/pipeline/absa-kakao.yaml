@@ -11,17 +11,23 @@ steps:
     with:
       dataset_path: datasets/processed/kakao
       verbose: true
+  - uses: pipe4
+    with:
+      num_samples: 100
+      randomize: false
+      verbose: true
+    verbose: true
   - uses: pipe2
     with:
       tasks: [QUAD]
       absa_config_name: default
       text_col: bodyText
-      batch_size: 10
-      num_workers: 20
+      batch_size: 5
+      num_workers: 5
       remove_columns: [lastModifiedDt, bodyText, writers, serviceUrl]
       load_from_cache_file: false
       verbose: true
   - uses: pipe3
     with:
-      dataset_path: outputs/preds/kakao_quad
+      dataset_path: outputs/preds/kakao_quad_100
     verbose: true
