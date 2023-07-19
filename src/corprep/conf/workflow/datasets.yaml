@@ -1,0 +1,12 @@
+# @package _global_
+defaults:
+  - __init__
+  - /task@ds_task: datasets
+  - /task@absa_task: absa
+  - override /project: corprep
+
+name: corprep
+verbose: true
+tasks:
+  - ds_task
+  # - absa_task
