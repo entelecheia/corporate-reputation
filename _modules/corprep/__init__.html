@@ -336,7 +336,7 @@ document.write(`
 
 <span class="kn">from</span> <span class="nn">hyfi</span> <span class="kn">import</span> <span class="n">HyFI</span><span class="p">,</span> <span class="n">about</span><span class="p">,</span> <span class="n">global_config</span>  <span class="c1"># type: ignore</span>
 
-<span class="kn">from</span> <span class="nn">._version</span> <span class="kn">import</span> <span class="n">__version__</span>
+<span class="kn">from</span> <span class="nn">._version</span> <span class="kn">import</span> <span class="n">__version__</span>  <span class="c1"># type: ignore</span>
 
 <span class="c1"># Read the package name from the current directory</span>
 <span class="n">__package_name__</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
@@ -344,10 +344,12 @@ document.write(`
 <span class="c1"># Extract package information</span>
 <span class="n">about</span><span class="o">.</span><span class="n">__package_name__</span> <span class="o">=</span> <span class="n">__package_name__</span>
 
+<span class="c1"># Initialize the logger</span>
 <span class="n">HyFI</span><span class="o">.</span><span class="n">setLogger</span><span class="p">()</span>
 
 
 <div class="viewcode-block" id="get_version"><a class="viewcode-back" href="../../api.html#corprep.__init__.get_version">[docs]</a><span class="k">def</span> <span class="nf">get_version</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the package version.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">__version__</span></div>
 </pre></div>
 

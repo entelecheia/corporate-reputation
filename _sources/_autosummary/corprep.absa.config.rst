@@ -14,7 +14,8 @@ corprep.absa.config
    .. autosummary::
    
       append_to_jsonl
-      create_agent
+      call_api
+      create_api
       parse_response_to_json
    
    
