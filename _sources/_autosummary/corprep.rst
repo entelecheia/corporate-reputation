@@ -33,6 +33,7 @@
    :toctree:
    :recursive:
 
+   corprep.absa
    corprep.conf
    corprep.datasets
 

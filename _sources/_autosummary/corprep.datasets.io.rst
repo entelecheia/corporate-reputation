@@ -1,7 +1,7 @@
-corprep.datasets.raw
-====================
+corprep.datasets.io
+===================
 
-.. automodule:: corprep.datasets.raw
+.. automodule:: corprep.datasets.io
 
    
    
@@ -13,7 +13,9 @@ corprep.datasets.raw
 
    .. autosummary::
    
+      load_dataset
       load_raw_dataset
+      save_dataset
    
    
 

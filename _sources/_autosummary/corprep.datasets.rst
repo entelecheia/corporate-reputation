@@ -33,5 +33,7 @@ corprep.datasets
    :toctree:
    :recursive:
 
-   corprep.datasets.raw
+   corprep.datasets.io
+   corprep.datasets.sample
+   corprep.datasets.tokenize
 
