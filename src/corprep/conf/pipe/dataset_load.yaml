@@ -4,5 +4,5 @@ defaults:
 run: corprep.datasets.io.load_dataset
 run_with:
   dataset_path:
-  verbose: false
+  verbose: ${..verbose}
 use_pipe_obj: false
