@@ -1,0 +1,10 @@
+# @package _global_
+defaults:
+  - __init__
+  - /task@absa_task: absa
+  - override /project: corprep
+
+name: corprep
+verbose: true
+tasks:
+  - absa_task

@@ -2,7 +2,7 @@ import datetime
 import json
 import time
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Optional, Tuple, Any
 
 import backoff
 import openai
@@ -11,6 +11,7 @@ from openai.error import (
     APIError,
     RateLimitError,
     ServiceUnavailableError,
+    InvalidRequestError,
 )
 from pydantic import BaseModel
 
@@ -38,9 +39,19 @@ class AbsaModel(BaseModel):
     prompts: PromptConfig = PromptConfig()
     prompt_name: str = "base"
     temperature: float = 0.0
-    save_filepath: Optional[str] = None
+    output_dir: str = "outputs/preds"
+    save_filename: Optional[str] = None
     verbose: bool = False
     _agent_: Optional[openai.ChatCompletion] = None
+
+    @property
+    def save_filepath(self):
+        model_name = self.model_name.replace(".", "")
+        save_filename = (
+            self.save_filename
+            or f"{self.absa_task}_{self.prompt_name}_{model_name}.jsonl"
+        )
+        return f"{self.output_dir}/{save_filename}"
 
     def init_api(self, api_key: Optional[str] = None):
         api_key = api_key or self.api_key
@@ -70,22 +81,22 @@ class AbsaModel(BaseModel):
             ],
         }
         delay = 60.0 / self.rate_limit_per_minute
-        response = create_agent(self._agent_, args, delay_in_seconds=delay)
-        response = response["content"].strip().strip("\n")
-        result = parse_response_to_json(response, text)
+        content, usage, _ = call_api(self._agent_, args, delay_in_seconds=delay)
+        result = parse_response_to_json(content, usage, text)
         if self.save_filepath:
             append_to_jsonl(result, self.save_filepath)
         # remove text from result to save space
         del result["text"]
-        return result
+        return json.dumps(result, ensure_ascii=False)
 
 
-def parse_response_to_json(response: str, text: str):
+def parse_response_to_json(response: str, usage: dict, text: str):
     try:
         response = json.loads(response)
         result = {
             "timestamp": f"{datetime.datetime.now():%Y-%m-%d %H:%M:%S}",
             "parsed": "success",
+            "usage": usage,
             "response": response,
             "text": text,
         }
@@ -93,6 +104,7 @@ def parse_response_to_json(response: str, text: str):
         result = {
             "timestamp": f"{datetime.datetime.now():%Y-%m-%d %H:%M:%S}",
             "parsed": "failed",
+            "usage": usage,
             "response": response,
             "text": text,
         }
@@ -116,6 +128,25 @@ def append_to_jsonl(data, filename: str, encoding: str = "utf-8") -> None:
         ServiceUnavailableError,
     ),
 )
-def create_agent(agent, args, delay_in_seconds: float = 1):
+def create_api(agent, args, delay_in_seconds: float = 1):
     time.sleep(delay_in_seconds)
-    return agent.create(**args).choices[0].message
+    response = agent.create(**args)
+    return response
+
+
+def call_api(agent, args, delay_in_seconds: float = 1) -> Tuple[str, dict, Any]:
+    time.sleep(delay_in_seconds)
+    try:
+        response = create_api(agent, args, delay_in_seconds=delay_in_seconds)
+        message = response["choices"][0]["message"]
+        content = message["content"].strip().strip("\n")
+        usage = response["usage"]
+        return content, usage, response
+    except InvalidRequestError as e:
+        logger.error(e)
+        usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+        return str(e.user_message), usage, e
+    except Exception as e:
+        logger.error(e)
+        usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+        return str(e), usage, e

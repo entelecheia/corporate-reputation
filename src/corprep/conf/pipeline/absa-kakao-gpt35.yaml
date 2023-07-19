@@ -20,14 +20,14 @@ steps:
   - uses: pipe2
     with:
       tasks: [QUAD]
-      absa_config_name: default
+      absa_config_name: gpt35
       text_col: bodyText
-      batch_size: 5
-      num_workers: 5
+      batch_size: 2
+      num_workers: 50
       remove_columns: [lastModifiedDt, bodyText, writers, serviceUrl]
       load_from_cache_file: false
       verbose: true
   - uses: pipe3
     with:
-      dataset_path: outputs/preds/kakao_quad_100
+      dataset_path: outputs/preds/kakao_quad_100_gpt35
     verbose: true

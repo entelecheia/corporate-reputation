@@ -62,5 +62,6 @@ def load_dataset(
         print(data[0])
         print(data[-1])
         logger.info("Dataset features: %s", data.features)
+        logger.info("Number of samples: %s", len(data))
 
     return data
