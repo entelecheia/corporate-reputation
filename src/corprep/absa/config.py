@@ -87,7 +87,7 @@ class AbsaModel(BaseModel):
             append_to_jsonl(result, self.save_filepath)
         # remove text from result to save space
         del result["text"]
-        return result
+        return json.dumps(result, ensure_ascii=False)
 
 
 def parse_response_to_json(response: str, usage: dict, text: str):
@@ -105,7 +105,7 @@ def parse_response_to_json(response: str, usage: dict, text: str):
             "timestamp": f"{datetime.datetime.now():%Y-%m-%d %H:%M:%S}",
             "parsed": "failed",
             "usage": usage,
-            "response": [response],
+            "response": response,
             "text": text,
         }
     return result
@@ -128,12 +128,25 @@ def append_to_jsonl(data, filename: str, encoding: str = "utf-8") -> None:
         ServiceUnavailableError,
     ),
 )
+def create_api(agent, args, delay_in_seconds: float = 1):
+    time.sleep(delay_in_seconds)
+    response = agent.create(**args)
+    return response
+
+
 def call_api(agent, args, delay_in_seconds: float = 1) -> Tuple[str, dict, Any]:
     time.sleep(delay_in_seconds)
     try:
-        response = agent.create(**args)
-        content = response["content"].strip().strip("\n")
-        return content, response.usage, response
+        response = create_api(agent, args, delay_in_seconds=delay_in_seconds)
+        message = response["choices"][0]["message"]
+        content = message["content"].strip().strip("\n")
+        usage = response["usage"]
+        return content, usage, response
     except InvalidRequestError as e:
         logger.error(e)
-        return str(e.user_message), {}, e
+        usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+        return str(e.user_message), usage, e
+    except Exception as e:
+        logger.error(e)
+        usage = {"prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0}
+        return str(e), usage, e
