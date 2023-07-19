@@ -3,7 +3,6 @@ defaults:
   - /pipe@pipe1: dataset_load_raw
   - /pipe@pipe3: dataset_save
   - /pipe@pipe4: dataset_sample
-  - /pipe@pipe5: dataset_save
 
 use_task_as_initial_object: true
 steps:
@@ -23,7 +22,7 @@ steps:
       num_samples: 10
       verbose: true
     verbose: true
-  - uses: pipe5
+  - uses: pipe3
     with:
       dataset_path: datasets/processed/kakao_sample
     verbose: true
