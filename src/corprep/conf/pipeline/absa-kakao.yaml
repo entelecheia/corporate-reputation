@@ -1,0 +1,27 @@
+defaults:
+  - __init__
+  - /pipe@pipe1: dataset_load
+  - /pipe@pipe2: absa_agent_predict
+  - /pipe@pipe4: dataset_sample
+  - /pipe@pipe3: dataset_save
+
+use_task_as_initial_object: true
+steps:
+  - uses: pipe1
+    with:
+      dataset_path: datasets/processed/kakao
+      verbose: true
+  - uses: pipe2
+    with:
+      tasks: [QUAD]
+      absa_config_name: default
+      text_col: bodyText
+      batch_size: 10
+      num_workers: 20
+      remove_columns: [lastModifiedDt, bodyText, writers, serviceUrl]
+      load_from_cache_file: false
+      verbose: true
+  - uses: pipe3
+    with:
+      dataset_path: outputs/preds/kakao_quad
+    verbose: true
