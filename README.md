@@ -20,14 +20,14 @@
 
 [repo-url]: https://github.com/entelecheia/corporate-reputation
 [pypi-url]: https://pypi.org/project/corporate-reputation
-[docs-url]: https://entelecheia.github.io/corporate-reputation
+[docs-url]: https://corporate-reputation.entelecheia.ai
 [changelog]: https://github.com/entelecheia/corporate-reputation/blob/main/CHANGELOG.md
 [contributing guidelines]: https://github.com/entelecheia/corporate-reputation/blob/main/CONTRIBUTING.md
 <!-- Links: -->
 
 Unraveling Corporate and CEO Reputation using Aspect-Based Sentiment Analysis and Signal Modeling
 
-- Documentation: [https://entelecheia.github.io/corporate-reputation][docs-url]
+- Documentation: [https://corporate-reputation.entelecheia.ai][docs-url]
 - GitHub: [https://github.com/entelecheia/corporate-reputation][repo-url]
 - PyPI: [https://pypi.org/project/corporate-reputation][pypi-url]
 
