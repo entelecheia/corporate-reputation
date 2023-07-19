@@ -1,5 +1,22 @@
 <!--next-version-placeholder-->
 
+## v0.4.0 (2023-07-19)
+
+### Feature
+
+* **corprep:** Add new absa workflow configuration ([`c0fb068`](https://github.com/entelecheia/corporate-reputation/commit/c0fb068cf3bb0961aeb71cee464602377840f692))
+* **corprep:** Add gpt35 pipeline to absa task configuration ([`d6c2fe8`](https://github.com/entelecheia/corporate-reputation/commit/d6c2fe8fe008a8040c5a7cdd1871bbf853af60dd))
+* **pipeline:** Add new absa-kakao-gpt35.yaml configuration file ([`594c317`](https://github.com/entelecheia/corporate-reputation/commit/594c317202695d64260cf92ee7bbd85474c070b7))
+* **corprep:** Add new gpt35.yaml configuration file for ABSA task ([`ceb35ab`](https://github.com/entelecheia/corporate-reputation/commit/ceb35ab00a3e6f337d34e333b94b9269024eed9d))
+
+### Fix
+
+* **absa/config:** Handle additional exceptions in call_api function ([`7a53ed4`](https://github.com/entelecheia/corporate-reputation/commit/7a53ed4e3e2c16fdd5bc4970e0832f36c9d0fc70))
+* **corprep:** Handle api responses and modify related functions ([`3400a26`](https://github.com/entelecheia/corporate-reputation/commit/3400a260fe18a9afd648ae9f6f76f35c3ecc4676))
+* **corprep/absa:** Handle InvalidRequestError in call_api function ([`4d70fbf`](https://github.com/entelecheia/corporate-reputation/commit/4d70fbf5d4d8e699909d1de1b41d4b26689f2370))
+* **corprep/datasets:** Add number of samples logging ([`872879c`](https://github.com/entelecheia/corporate-reputation/commit/872879c772970ff2b01914f2c9d1205a332dab60))
+* **absa:** Adjust agent call function and return structure ([`d10ad61`](https://github.com/entelecheia/corporate-reputation/commit/d10ad6135e4f31b0e77365cdfb19b281105d3121))
+
 ## v0.3.0 (2023-07-19)
 
 ### Feature
