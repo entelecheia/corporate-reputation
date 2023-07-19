@@ -1,0 +1,12 @@
+defaults:
+  - __init__
+  - /pipe@pipe1: dataset_load
+  - /pipe@pipe4: dataset_sample
+  - /pipe@pipe3: dataset_save
+
+use_task_as_initial_object: true
+steps:
+  - uses: pipe1
+    with:
+      dataset_path: datasets/processed/kakao
+      verbose: true
