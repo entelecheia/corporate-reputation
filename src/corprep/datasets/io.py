@@ -47,3 +47,20 @@ def save_dataset(
     logger.info("Dataset saved to %s.", dataset_path)
 
     return data
+
+
+def load_dataset(
+    dataset_path: str,
+    verbose: bool = False,
+) -> Dataset:
+    """
+    Save a dataset.
+    """
+    data = Dataset.load_from_disk(dataset_path)
+    logger.info("Dataset loaded from %s.", dataset_path)
+    if verbose:
+        print(data[0])
+        print(data[-1])
+        logger.info("Dataset features: %s", data.features)
+
+    return data
