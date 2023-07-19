@@ -9,3 +9,4 @@ src/corprep/__init__.py
 tests/corprep/test_cli.py
 book/_toc.yml
 .gitignore
+book/index.md
