@@ -1,0 +1,10 @@
+defaults:
+  - default
+
+prompts:
+  TRIPLE:
+    prompt_name: |
+      Put your text here. Multi-line prompts are supported.
+  QUAD:
+    prompt_name: |
+      Put your text here. Multi-line prompts are supported.
