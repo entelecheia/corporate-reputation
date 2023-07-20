@@ -1,5 +1,15 @@
 <!--next-version-placeholder-->
 
+## v0.5.0 (2023-07-20)
+
+### Feature
+
+* **config:** Add new configuration files for absa, pipeline, task, and workflow ([`0883120`](https://github.com/entelecheia/corporate-reputation/commit/0883120369d3e7d2726fc31cdda8712382f4017c))
+
+### Documentation
+
+* Update URL from Github pages to subdomain ([`f6b5f59`](https://github.com/entelecheia/corporate-reputation/commit/f6b5f59beb2acf938001dd08c02549cb4d6a19fa))
+
 ## v0.4.0 (2023-07-19)
 
 ### Feature
