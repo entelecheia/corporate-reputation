@@ -8,6 +8,4 @@ rate_limit_per_minute: 3500
 absa_task: QUAD
 prompt_name: base
 temperature: 0.0
-output_dir: outputs/preds
-save_filename:
 verbose: true

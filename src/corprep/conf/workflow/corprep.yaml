@@ -8,5 +8,5 @@ defaults:
 name: corprep
 verbose: true
 tasks:
-  # - ds_task
+  - ds_task
   - absa_task
