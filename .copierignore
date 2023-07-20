@@ -10,3 +10,5 @@ tests/corprep/test_cli.py
 book/_toc.yml
 .gitignore
 book/index.md
+.github/workflows/prerelease.yaml
+.tasks.toml

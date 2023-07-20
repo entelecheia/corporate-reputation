@@ -1,0 +1,11 @@
+defaults:
+  - __init__
+  - /pipeline@absa_pipeline: absa-kakao
+  - /pipeline@absa_pipeline_gpt35: absa-kakao-gpt35
+
+_config_name_: absa
+task_name: absa
+verbose: true
+pipelines:
+  # - absa_pipeline
+  - absa_pipeline_gpt35

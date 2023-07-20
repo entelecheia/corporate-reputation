@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - corprep
+- override /task@absa_task: absa-test
+
+tasks:
+  # - ds_task
+  - absa_task
