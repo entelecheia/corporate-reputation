@@ -117,16 +117,16 @@ class Normalizer(BaseConfig):
 
     _ftfy_cfg: Optional[TextFixerConfig] = None
 
-    def __call__(self, text: Optional[str]) -> Optional[str]:
+    def __call__(self, text: Optional[str]) -> str:
         """Calling a normalizer instance like a function just calls the normalize method."""
         return self.normalize(text)
 
-    def normalize(self, text: Optional[str]) -> Optional[str]:
+    def normalize(self, text: Optional[str]) -> str:
         """Run the Normalizer on a string.
         :param text: The string to normalize.
         """
         if text is None:
-            return None
+            return ""
         text = self._fix_text(text)
 
         # Normalize to canonical unicode (using NFKC by default)
@@ -179,7 +179,7 @@ class Normalizer(BaseConfig):
         if self.special_characters.fix_emoticons and text is not None:
             text = emoticon_normalize(text, num_repeats=self.num_repeats)
 
-        return text
+        return text or ""
 
     def _fix_text(self, text: Optional[str]) -> Optional[str]:
         if self._ftfy_cfg is None:
