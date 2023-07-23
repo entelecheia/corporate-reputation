@@ -35,15 +35,13 @@ def batch_predict(
     if model.verbose:
         print(model)
 
-    res = []
-    for i, text in enumerate(batch[text_col]):
-        res.append(predict_each(text, model))
+    res = [predict_each(text, model) for text in batch[text_col]]
     return {f"{task}_pred": res}
 
 
 def predict(
     dataset: Dataset,
-    tasks=["QUAD"],
+    tasks=None,
     absa_config_name: str = "default",
     text_col: str = "bodyText",
     batch_size=2,
@@ -52,6 +50,8 @@ def predict(
     load_from_cache_file=True,
     verbose=False,
 ) -> Dataset:
+    if tasks is None:
+        tasks = ["QUAD"]
     for task in tasks:
         logger.info("Predicting %s...", task)
         dataset = dataset.map(
