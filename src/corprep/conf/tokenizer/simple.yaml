@@ -2,3 +2,4 @@ defaults:
   - __init__
 
 _target_: corprep.tokenizer.SimpleTokenizer
+strip_pos: true
