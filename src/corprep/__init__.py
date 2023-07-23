@@ -1,6 +1,6 @@
 import os
 
-import hyfi
+from hyfi import HyFI
 
 from ._version import __version__
 
@@ -8,12 +8,15 @@ from ._version import __version__
 __package_name__ = os.path.basename(os.path.dirname(__file__))
 
 # Initialize the global HyFI object
-hyfi.initialize_global_hyfi(package_name=__package_name__, version=__version__)
+HyFI.initialize_global_hyfi(package_name=__package_name__, version=__version__)
 
 # Initialize the logger
-hyfi.HyFI.setLogger()
+HyFI.setLogger()
 
 
 def get_version() -> str:
     """Get the package version."""
     return __version__
+
+
+__all__ = ["HyFI", "get_version"]
