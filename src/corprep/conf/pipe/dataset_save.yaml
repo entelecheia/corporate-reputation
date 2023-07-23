@@ -1,6 +1,0 @@
-defaults:
-  - __general_external_funcs__
-
-run: corprep.datasets.io.save_dataset
-run_with:
-  dataset_path:
