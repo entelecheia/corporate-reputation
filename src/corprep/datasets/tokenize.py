@@ -8,24 +8,26 @@ logger = HyFI.getLogger(__name__)
 
 def tokenize_dataset(
     data: Dataset,
+    tokenizer_config_name: str = "simple",
     num_proc: int = 1,
     batched: bool = True,
     text_col: str = "bodyText",
+    token_col: str = "tokenizedText",
     verbose: bool = False,
 ) -> Dataset:
     def pos_tagging(batch):
-        mecab = Mecab()
-        batch_tags = []
+        tokenizer = HyFI.instantiate_config(f"tokenizer={tokenizer_config_name}")
+        batch_tokens = []
         for text in batch[text_col]:
             sentences = text.split("\n")
-            pos_tags = []
+            tokens = []
             for sentence in sentences:
-                pos_tags.extend(mecab.pos(sentence))
-            batch_tags.append(pos_tags)
-        return {"pos_tags": batch_tags}
+                tokens.extend(tokenizer(sentence))
+            batch_tokens.append(tokens)
+        return {token_col: batch_tokens}
 
     data = data.map(pos_tagging, num_proc=num_proc, batched=batched)
     logger.info("POS tagging done.")
     if verbose:
-        print(data[0]["pos_tags"])
+        print(data[0][token_col])
     return data

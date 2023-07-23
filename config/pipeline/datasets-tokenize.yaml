@@ -10,13 +10,12 @@ steps:
       verbose: true
   - uses: pipe_sample
     with:
-      num_samples: 100
+      num_samples: 11
       randomize: false
       verbose: true
   - uses: pipe_tokenize
     with:
-      num_samples: 100
-      batched: true
+      tokenizer_config_name: simple
       text_col: bodyText
       token_col: tokenizedText
       verbose: true

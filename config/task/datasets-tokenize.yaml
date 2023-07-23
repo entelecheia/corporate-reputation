@@ -1,0 +1,10 @@
+defaults:
+  - __init__
+  - /pipeline@test_pipeline: datasets-tokenize
+
+_config_name_: datasets-tokenize
+task_name: datasets-tokenize
+verbose: true
+pipelines:
+  # - ds_pipeline
+  - test_pipeline

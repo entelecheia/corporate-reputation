@@ -1,7 +1,7 @@
 defaults:
   - __init__
   - /pipe@pipe1: dataset_load_raw
-  - /pipe@pipe3: dataset_save
+  - /pipe@pipe3: dataset_save_to_disk
   - /pipe@pipe4: dataset_sample
 
 use_task_as_initial_object: true
