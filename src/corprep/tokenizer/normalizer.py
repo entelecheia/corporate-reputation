@@ -2,6 +2,7 @@ import re
 from typing import Optional
 
 from ftfy import TextFixerConfig, fix_text
+from hyfi.composer.base import BaseConfig
 from pydantic import BaseModel
 
 from corprep import HyFI  # type: ignore
@@ -98,7 +99,7 @@ class SpecialCharactersConfig(BaseModel):
     regular_parentheses_only: bool = False
 
 
-class Normalizer(BaseModel):
+class Normalizer(BaseConfig):
     """Main Normalizer class for generic text.
     Normalize unicode, hyphens, quotes, whitespace.
     By default, the normal form NFKC is used for unicode normalization.
