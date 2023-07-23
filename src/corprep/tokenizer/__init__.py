@@ -1,11 +1,12 @@
 import codecs
-from typing import Any, Callable, List, Optional, Union, Tuple
+from typing import Any, Callable, List, Optional, Tuple, Union
 
 from pydantic import BaseModel, model_validator
 
 from corprep import HyFI
-from .stopwords import Stopwords
+
 from .normalizer import Normalizer
+from .stopwords import Stopwords
 
 logger = HyFI.getLogger(__name__)
 
