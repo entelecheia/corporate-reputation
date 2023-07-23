@@ -1,5 +1,40 @@
 <!--next-version-placeholder-->
 
+## v0.6.0 (2023-07-23)
+
+### Feature
+
+* **tests:** Add tokenizer test in corprep module ([`5487cf7`](https://github.com/entelecheia/corporate-reputation/commit/5487cf7608628ea897682ab62101b5b03f746dd6))
+* **corprep/datasets:** Add similarity.py file with similarity analysis functions ([`708e79f`](https://github.com/entelecheia/corporate-reputation/commit/708e79feabdc5cbb95c60172b928972363b8e417))
+* **tokenizer:** Add strip_pos option to SimpleTokenizer configuration ([`7fc3991`](https://github.com/entelecheia/corporate-reputation/commit/7fc39910a6b45b55d72c4b4cd62f951f32f0a784))
+* **corprep:** Add tokenizer_config_name and token_col to dataset tokenize configuration ([`4691e71`](https://github.com/entelecheia/corporate-reputation/commit/4691e71460c316ed2cbbddaef29ec4fad7e29b3b))
+* **config/task:** Add new datasets-tokenize.yaml file ([`c3f2af5`](https://github.com/entelecheia/corporate-reputation/commit/c3f2af5762cd5f5f71a714c20230d64be8edc44c))
+* **pipeline:** Create datasets-tokenize.yaml for tokenization in pipeline ([`743b8d7`](https://github.com/entelecheia/corporate-reputation/commit/743b8d765de0aa769c7e23d78e9a0a6969dca66d))
+* **tokenizer:** Add flatten option to MecabTokenizer config ([`070740b`](https://github.com/entelecheia/corporate-reputation/commit/070740b61798d23ab7de37bbdeb0e2c11c4d96eb))
+* **tokenizer:** Add new tokenizer configurations for SimpleTokenizer, MecabTokenizer, NLTKTokenizer, add new tagger configurations for mecab and nltk ([`26496c1`](https://github.com/entelecheia/corporate-reputation/commit/26496c1c6dd40a4f65d085d8b10053e19a06405a))
+* **tokenizer:** Add new tokenizer classes and methods ([`df773b9`](https://github.com/entelecheia/corporate-reputation/commit/df773b9c1d68835a68e4e1575f9fc67c7b6998fb))
+* **tokenizer:** Add hanja table loading function ([`b420649`](https://github.com/entelecheia/corporate-reputation/commit/b42064991ca9b4555350e7b9467b8bc5cc1edc59))
+* **tests:** Add stopwords test in tokenizer ([`30335b3`](https://github.com/entelecheia/corporate-reputation/commit/30335b379f5c21ae684d81a381e60406348be857))
+* **tokenizer:** Add stopwords functionality ([`073a176`](https://github.com/entelecheia/corporate-reputation/commit/073a176068c2262dee11cea3d56eace8b1d3206c))
+* **corprep:** Add new stopwords configuration ([`bb79233`](https://github.com/entelecheia/corporate-reputation/commit/bb79233ba198e0690efaced848d28f6347642051))
+* **pyproject.toml:** Add nltk dependency ([`cf00d4c`](https://github.com/entelecheia/corporate-reputation/commit/cf00d4c3ad621a1b34faafe78c9cf827cc8ded3b))
+* **corprep:** Add new configuration files for text normalization ([`ce82466`](https://github.com/entelecheia/corporate-reputation/commit/ce824660ed8eb5f3703826e56dc637a13619729c))
+* **normalizer:** Add new configurations for text normalization ([`ac53a45`](https://github.com/entelecheia/corporate-reputation/commit/ac53a45356eae16e8f4a770b85ca9687628e168e))
+* **corprep:** Add new about information ([`bf79ee0`](https://github.com/entelecheia/corporate-reputation/commit/bf79ee0cfeab4c0ff69a2cc501ee312c1d94d345))
+* **corprep/resources/dictionaries/mecab:** Add new ekon_v1.dic file ([`d408222`](https://github.com/entelecheia/corporate-reputation/commit/d408222785369eea7ce8b8d7d805c5944aa03bbb))
+* **tokenizer:** Add utils for text normalization and string metrics ([`6b1d818`](https://github.com/entelecheia/corporate-reputation/commit/6b1d8184433717d51b962bc227b448fd4a9b4330))
+* **tokenizer:** Add hangle encoder with normalization and decomposition functions ([`afe155b`](https://github.com/entelecheia/corporate-reputation/commit/afe155b1436c39ee7d5ab8906bc097bb43f27a28))
+* **corprep/tokenizer/hanja:** Add new translation functions and character handling for Hangul and Hanja ([`490c763`](https://github.com/entelecheia/corporate-reputation/commit/490c763cfe1311216f356bd6ac4737e760f2e51b))
+* **tokenizer:** Add normalizer.py with normalizer functionality ([`8e579aa`](https://github.com/entelecheia/corporate-reputation/commit/8e579aae696f0ba395865266637244d5e47092c5))
+* **dependencies:** Add scikit-learn version 1.3.0 ([`6c34d44`](https://github.com/entelecheia/corporate-reputation/commit/6c34d44ad5156f543ef49369756587b994239f56))
+
+### Fix
+
+* **pipeline:** Correct typo in tokenize step ([`c9158d8`](https://github.com/entelecheia/corporate-reputation/commit/c9158d8a0b9f4c63c865f0b3149afbcad84af18c))
+* **NLTKTokenizer:** Modify parse method return type ([`48ee9cd`](https://github.com/entelecheia/corporate-reputation/commit/48ee9cdd4283a998214ce97133f11adc0a5765d7))
+* **corprep:** Streamline main function and import statements ([`11533a2`](https://github.com/entelecheia/corporate-reputation/commit/11533a2f793b5771f87d27a9cffe07fed0070ca3))
+* **corprep:** Change how HyFi is initialized and used ([`c2e0344`](https://github.com/entelecheia/corporate-reputation/commit/c2e03440e8f9856878865a6c8b4dfa94cffd7d29))
+
 ## v0.5.0 (2023-07-20)
 
 ### Feature
