@@ -4,7 +4,6 @@ defaults:
 
 _target_: corprep.tokenizer.SimpleTokenizer
 lowercase: false
-flatten: true
 strip_pos: false
 postag_delim: /
 postag_length:

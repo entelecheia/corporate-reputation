@@ -15,7 +15,6 @@ class Tokenizer(BaseModel):
     normalizer: Normalizer = Normalizer()
 
     lowercase: bool = False
-    flatten: bool = True
     strip_pos: bool = False
     postag_delim: str = "/"
     postag_length: Optional[int] = None
@@ -23,7 +22,7 @@ class Tokenizer(BaseModel):
     tokenize_each_word: bool = False
     sentence_separator: str = "\n"
     userdic_path: Optional[str] = None
-    wordpieces_prefix: str = "##"
+    wordpieces_prefix: Optional[str] = "##"
     postags: Optional[List[str]] = None
     noun_postags: Optional[List[str]] = None
     punct_postags: List[str] = ["SF", "SP", "SSO", "SSC", "SY"]
@@ -55,8 +54,8 @@ class Tokenizer(BaseModel):
             term_pos = []
         return term_pos
 
-    def parse(self, text: str) -> List[str]:
-        return text.split()
+    def parse(self, text: str) -> List[Tuple[str, str]]:
+        return [(token, "") for token in text.split()]
 
     def to_token(self, term_pos: Union[str, tuple]) -> str:
         if isinstance(term_pos, tuple):
@@ -70,22 +69,25 @@ class Tokenizer(BaseModel):
 
     def tokenize_word(self, word: str) -> List[str]:
         tokens = self.parse(word)
-        if len(tokens) > 1 and isinstance(tokens[0], tuple):
-            term_pos = []
-            for i, (term, pos) in enumerate(tokens):
-                term = self.to_token((term, pos))
-                if (
-                    i > 0
-                    and pos not in self.punct_postags
-                    and tokens[i - 1][1] not in self.punct_postags
-                ):
-                    term = f"{self.wordpieces_prefix}{term}"
-                term_pos.append(term)
-            return term_pos
-        return tokens
+        tokenized = []
+        for i, token_pos in enumerate(tokens):
+            term = self.to_token(token_pos)
+            if i == 0 or not self.include_whitespace_token:
+                tokenized.append(term)
+                continue
+            pos = token_pos[1]
+            prv_pos = tokens[i - 1][1]
+            if (
+                self.wordpieces_prefix
+                and pos not in self.punct_postags
+                and prv_pos not in self.punct_postags
+            ):
+                term = f"{self.wordpieces_prefix}{term}"
+            tokenized.append(term)
+        return tokenized
 
-    def pos(self, text: str) -> List[str]:
-        return self.tokenize(text)
+    def pos(self, text: str) -> List[Tuple[str, str]]:
+        return self.parse(text)
 
     def tokenize_article(
         self,
@@ -270,7 +272,7 @@ class NLTKTagger(BaseModel):
 class NLTKTokenizer(Tokenizer):
     tagger: NLTKTagger = NLTKTagger()
 
-    def parse(self, text: str) -> List[str]:
+    def parse(self, text: str) -> List[Tuple[str, str]]:
         token_tuples = self.tagger._parse(text)
         tokens = []
         for token_tuple in token_tuples:
@@ -283,11 +285,8 @@ class NLTKTokenizer(Tokenizer):
 
 
 class SimpleTokenizer(Tokenizer):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-
-    def parse(self, text: str) -> List[str]:
-        return text.split()
+    def parse(self, text: str) -> List[Tuple[str, str]]:
+        return [(token, "") for token in text.split()]
 
 
 class MecabTagger(BaseModel):
@@ -310,11 +309,10 @@ class MecabTagger(BaseModel):
 
 class MecabTokenizer(Tokenizer):
     tagger: MecabTagger = MecabTagger()
+    flatten: bool = True
 
-    def parse(self, text: str) -> List[str]:
-        return [
-            _tuple_to_token(token_tuple) for token_tuple in self.tagger._parse(text)
-        ]
+    def parse(self, text: str) -> List[Tuple[str, str]]:
+        return self.tagger._parse(text)
 
 
 def _match_tags(
