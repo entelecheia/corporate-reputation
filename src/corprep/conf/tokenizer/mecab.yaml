@@ -3,6 +3,7 @@ defaults:
   - tagger: mecab
 
 _target_: corprep.tokenizer.MecabTokenizer
+flatten: true
 noun_postags:
   - NNG
   - NNP
