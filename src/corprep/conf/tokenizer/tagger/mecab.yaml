@@ -1,3 +1,0 @@
-userdic_path: ${..userdic_path}
-backend: ekonlpy
-verbose: ${oc.select:..verbose, false}
