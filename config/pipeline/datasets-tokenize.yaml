@@ -18,6 +18,7 @@ steps:
       tokenizer_config_name: mecab
       text_col: bodyText
       token_col: tokenizedText
+      load_from_cache_file: false
       verbose: true
   - uses: pipe_save
     with:
