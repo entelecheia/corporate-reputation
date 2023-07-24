@@ -1,5 +1,17 @@
 <!--next-version-placeholder-->
 
+## v0.7.0 (2023-07-24)
+
+### Feature
+
+* **tokenize:** Add load_from_cache_file option ([`f4e0057`](https://github.com/entelecheia/corporate-reputation/commit/f4e0057be857537a953cf94059bd644d2a99ef65))
+* **pipeline:** Add load from cache option in tokenizer config ([`9617708`](https://github.com/entelecheia/corporate-reputation/commit/96177083e3140b7de138ab019f5a7e6fa2ea24b5))
+* **corprep:** Add lexikanon plugin to HyFI initialization ([`2fe976a`](https://github.com/entelecheia/corporate-reputation/commit/2fe976ab53702422050618be95ba85da9e8aee67))
+
+### Fix
+
+* **dependencies:** Upgrade hyfi to 1.9.0 and ekonlpy to 2.0.1 ([`f53fa18`](https://github.com/entelecheia/corporate-reputation/commit/f53fa18dc188b9188577c3a7b8278144fdeabbb9))
+
 ## v0.6.0 (2023-07-23)
 
 ### Feature
