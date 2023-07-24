@@ -10,7 +10,7 @@ steps:
       verbose: true
   - uses: pipe_sample
     with:
-      num_samples: 11
+      num_samples: 15
       randomize: false
       verbose: true
   - uses: pipe_tokenize
