@@ -15,7 +15,7 @@ steps:
       verbose: true
   - uses: pipe_tokenize
     with:
-      tokenizer_config_name: simple
+      tokenizer_config_name: mecab
       text_col: bodyText
       token_col: tokenizedText
       verbose: true
