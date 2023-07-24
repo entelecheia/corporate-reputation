@@ -12,6 +12,7 @@ def tokenize_dataset(
     batched: bool = True,
     text_col: str = "bodyText",
     token_col: str = "tokenizedText",
+    load_from_cache_file: bool = True,
     verbose: bool = False,
 ) -> Dataset:
     def pos_tagging(batch):
@@ -25,7 +26,12 @@ def tokenize_dataset(
             batch_tokens.append(tokens)
         return {token_col: batch_tokens}
 
-    data = data.map(pos_tagging, num_proc=num_proc, batched=batched)
+    data = data.map(
+        pos_tagging,
+        num_proc=num_proc,
+        batched=batched,
+        load_from_cache_file=load_from_cache_file,
+    )
     logger.info("POS tagging done.")
     if verbose:
         print(data[0][token_col])
