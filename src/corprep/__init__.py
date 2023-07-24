@@ -8,7 +8,11 @@ from ._version import __version__
 __package_name__ = os.path.basename(os.path.dirname(__file__))
 
 # Initialize the global HyFI object
-HyFI.initialize_global_hyfi(package_name=__package_name__, version=__version__)
+HyFI.initialize_global_hyfi(
+    package_name=__package_name__,
+    version=__version__,
+    plugins=["lexikanon"],
+)
 
 # Initialize the logger
 HyFI.setLogger()
