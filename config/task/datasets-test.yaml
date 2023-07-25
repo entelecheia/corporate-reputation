@@ -1,10 +1,3 @@
 defaults:
-  - __init__
-  - /pipeline@test_pipeline: datasets-test
-
-_config_name_: datasets-test
-task_name: datasets
-verbose: true
-pipelines:
-  # - ds_pipeline
-  - test_pipeline
+  - datasets
+  - override /pipeline@ds_pipeline: datasets-test

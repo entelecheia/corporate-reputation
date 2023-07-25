@@ -1,11 +1,9 @@
 defaults:
   - __init__
-  - /pipeline@ds_pipeline: datasets-kakao
-  - /pipeline@test_pipeline: datasets-test
+  - /pipeline@ds_pipeline: datasets
 
 _config_name_: datasets
 task_name: datasets
 verbose: true
 pipelines:
   - ds_pipeline
-  - test_pipeline
