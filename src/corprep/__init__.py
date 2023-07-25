@@ -4,12 +4,12 @@ from hyfi import HyFI
 
 from ._version import __version__
 
-# Read the package name from the current directory
-__package_name__ = os.path.basename(os.path.dirname(__file__))
+# Read the package path from the current directory
+__package_path__ = os.path.dirname(__file__)
 
 # Initialize the global HyFI object
 HyFI.initialize_global_hyfi(
-    package_name=__package_name__,
+    package_path=__package_path__,
     version=__version__,
     plugins=["lexikanon"],
 )
