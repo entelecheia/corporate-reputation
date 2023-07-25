@@ -4,8 +4,9 @@ defaults:
 run: corprep.datasets.tokenize.extract_tokens
 run_with:
   tokenizer_config_name: simple
-  num_proc: 1
+  num_workers: 1
   batched: true
+  batch_size: 1000
   token_col: tokenizedText
   nouns_only: false
   postags:
