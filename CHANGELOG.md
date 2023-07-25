@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.7.1 (2023-07-25)
+
+### Fix
+
+* **corprep:** Replace package name with path ([`adb8932`](https://github.com/entelecheia/corporate-reputation/commit/adb893278c152f2d6965469cbf4e197ed29fe27f))
+* **dependencies:** Upgrade hyfi to 1.9.3 and lexikanon to 0.2.3 ([`1dd2766`](https://github.com/entelecheia/corporate-reputation/commit/1dd2766602bd09118684667c75d33812006c33fc))
+
 ## v0.7.0 (2023-07-24)
 
 ### Feature
