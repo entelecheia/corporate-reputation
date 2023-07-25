@@ -10,8 +10,9 @@ logger = HyFI.getLogger(__name__)
 def tokenize_dataset(
     data: Dataset,
     tokenizer_config_name: str = "simple",
-    num_proc: int = 1,
+    num_workers: int = 1,
     batched: bool = True,
+    batch_size: int = 1000,
     text_col: str = "bodyText",
     token_col: str = "tokenizedText",
     load_from_cache_file: bool = True,
@@ -30,8 +31,9 @@ def tokenize_dataset(
 
     data = data.map(
         pos_tagging,
-        num_proc=num_proc,
+        num_proc=num_workers,
         batched=batched,
+        batch_size=batch_size,
         load_from_cache_file=load_from_cache_file,
     )
     logger.info("POS tagging done.")
@@ -43,8 +45,9 @@ def tokenize_dataset(
 def extract_tokens(
     data: Dataset,
     tokenizer_config_name: str = "simple",
-    num_proc: int = 1,
+    num_workers: int = 1,
     batched: bool = True,
+    batch_size: int = 1000,
     token_col: str = "tokenizedText",
     nouns_only: bool = False,
     postags: Optional[List[str]] = None,
@@ -74,11 +77,13 @@ def extract_tokens(
 
     data = data.map(
         pos_tagging,
-        num_proc=num_proc,
+        num_proc=num_workers,
         batched=batched,
+        batch_size=batch_size,
         load_from_cache_file=load_from_cache_file,
     )
     logger.info("POS tagging done.")
     if verbose:
-        print(data[0][token_col])
+        num_samples = min(5, len(data))
+        print(data[:num_samples][token_col])
     return data
