@@ -1,6 +1,5 @@
 defaults:
   - datasets
-  - /pipe@pipe_sample: dataset_sample
 
 use_task_as_initial_object: true
 steps:
