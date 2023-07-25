@@ -1,6 +1,7 @@
 defaults:
   - datasets
   - /pipe@pipe_sample: dataset_sample
+  - /pipe@pipe_extract: dataset_extract_tokens
 
 use_task_as_initial_object: true
 steps:
@@ -18,6 +19,13 @@ steps:
       tokenizer_config_name: mecab
       text_col: bodyText
       token_col: tokenizedText
+      load_from_cache_file: false
+      verbose: true
+  - uses: pipe_extract
+    with:
+      tokenizer_config_name: kakao
+      token_col: tokenizedText
+      nouns_only: true
       load_from_cache_file: false
       verbose: true
   - uses: pipe_save
