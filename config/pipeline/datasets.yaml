@@ -49,4 +49,5 @@ steps:
   - uses: pipe_save
     with:
       dataset_path: datasets/processed/kakao_nouns
+      verbose: true
     verbose: true
