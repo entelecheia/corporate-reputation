@@ -1,5 +1,22 @@
 <!--next-version-placeholder-->
 
+## v0.8.0 (2023-07-26)
+
+### Feature
+
+* **corprep:** Add run configurations for absa_agent_predict, filter_dataset and load_raw_dataset ([`7290fca`](https://github.com/entelecheia/corporate-reputation/commit/7290fcaadecf67e492cfb73f7e2370697b05d794))
+* **workflow:** Add datasets-test configuration file ([`b612cc4`](https://github.com/entelecheia/corporate-reputation/commit/b612cc4aa8890a62e4e6241675b16a526a2623e7))
+* **pipeline/config:** Enhance datasets.yaml ([`28a6108`](https://github.com/entelecheia/corporate-reputation/commit/28a61087aae57f6eb5591eb8bb8e9623af4e0622))
+* **tokenize:** Add extract_tokens function to handle part-of-speech tagging ([`c6482fb`](https://github.com/entelecheia/corporate-reputation/commit/c6482fb1b69a6b54d4034df856a8e93f0bed2f2a))
+* **corprep:** Add dataset_extract_nouns configuration, add dataset_extract_tokens configuration ([`5ddf017`](https://github.com/entelecheia/corporate-reputation/commit/5ddf017f49e61c7bbd171c6cabde4786f1ee5ecc))
+* **tokenizer:** Add kakao configuration ([`9ae964f`](https://github.com/entelecheia/corporate-reputation/commit/9ae964ffebd0153bdffca32864b7a7b881d7e0dc))
+* **pipeline:** Add extract tokens step with kakao tokenizer config ([`04e66d2`](https://github.com/entelecheia/corporate-reputation/commit/04e66d217c1790d8ca46470ae5aa118c45c53eaa))
+
+### Fix
+
+* **workflow:** Add workflow_name field to workflows ([`f9dfb5b`](https://github.com/entelecheia/corporate-reputation/commit/f9dfb5b67ba2b7ce444aa7381901c0269acca35c))
+* **dependencies:** Upgrade hyfi to 1.9.4 ([`98e0228`](https://github.com/entelecheia/corporate-reputation/commit/98e02289983ecc7778e59cf5d149af0374cb41c0))
+
 ## v0.7.1 (2023-07-25)
 
 ### Fix
