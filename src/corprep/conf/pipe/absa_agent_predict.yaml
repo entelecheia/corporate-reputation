@@ -1,15 +1,6 @@
 defaults:
   - __general_external_funcs__
+  - /run: absa_agent_predict
 
-run: corprep.absa.agent.predict
-run_with:
-  tasks: [AE]
-  absa_config_name: default
-  text_col: bodyText
-  batch_size: 10
-  num_workers: 1
-  remove_columns:
-  load_from_cache_file: true
-  verbose: ${..verbose}
 use_pipe_obj: true
 return_pipe_obj: false

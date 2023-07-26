@@ -5,7 +5,7 @@ defaults:
   - /task@absa_task: absa
   - override /project: corprep
 
-name: corprep
+workflow_name: corprep
 verbose: true
 tasks:
   - ds_task

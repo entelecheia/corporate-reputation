@@ -1,0 +1,8 @@
+defaults:
+  - __init__
+
+_target_: corprep.datasets.preprocessing.filter.filter_dataset
+num_proc: 1
+batched: true
+text_col: bodyText
+verbose: ${oc.select:..verbose, false}

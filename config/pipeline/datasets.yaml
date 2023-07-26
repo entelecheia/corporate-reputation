@@ -4,17 +4,50 @@ defaults:
   - /pipe@pipe_load: dataset_load_from_disk
   - /pipe@pipe_save: dataset_save_to_disk
   - /pipe@pipe_tokenize: dataset_tokenize
+  - /pipe@pipe_sample: dataset_sample
+  - /pipe@pipe_extract: dataset_extract_tokens
 
 use_task_as_initial_object: true
 steps:
   - uses: pipe_load_raw
     with:
-      raw_dataset_dir: workspace/datasets/raw/kakao_news
+      raw_dataset_dir: datasets/processed/kakao_filtered
       path: parquet
       file_pattern: "*.parquet"
       verbose: true
     verbose: true
+  # - uses: pipe_load
+  #   with:
+  #     dataset_path: datasets/processed/kakao_filtered
+  #     verbose: true
+  # - uses: pipe_sample
+  #   with:
+  #     num_samples: 15
+  #     randomize: true
+  #     verbose: true
+  - uses: pipe_tokenize
+    with:
+      tokenizer_config_name: mecab
+      # batch_size: 3
+      num_workers: 50
+      text_col: cleaned_text
+      token_col: tokenizedText
+      remove_columns: [bodyText, cleaned_text, analyse_text]
+      load_from_cache_file: false
+      verbose: true
+  - uses: pipe_extract
+    with:
+      tokenizer_config_name: kakao
+      # batch_size: 3
+      num_workers: 50
+      token_col: tokenizedText
+      extracted_col: nouns
+      nouns_only: true
+      remove_columns: [tokenizedText]
+      load_from_cache_file: false
+      verbose: true
   - uses: pipe_save
     with:
-      dataset_path: datasets/processed/kakao
+      dataset_path: datasets/processed/kakao_nouns
+      verbose: true
     verbose: true
