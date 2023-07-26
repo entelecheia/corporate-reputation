@@ -1,0 +1,12 @@
+defaults:
+  - __init__
+
+_target_: corprep.absa.agent.predict
+tasks: [AE]
+absa_config_name: default
+text_col: bodyText
+batch_size: 10
+num_workers: 1
+remove_columns:
+load_from_cache_file: true
+verbose: ${oc.select:..verbose, false}

@@ -1,0 +1,7 @@
+defaults:
+  - __init__
+
+_target_: corprep.datasets.io.load_raw_dataset
+raw_dataset_dir:
+path: json
+verbose: ${oc.select:..verbose, false}
