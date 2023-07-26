@@ -34,34 +34,3 @@ def load_raw_dataset(
         logger.info("Dataset features: %s", ds_train.features)
 
     return ds_train
-
-
-def save_dataset(
-    data: Dataset,
-    dataset_path: Union[str, Path],
-) -> Dataset:
-    """
-    Save a dataset.
-    """
-    data.save_to_disk(dataset_path)
-    logger.info("Dataset saved to %s.", dataset_path)
-
-    return data
-
-
-def load_dataset(
-    dataset_path: str,
-    verbose: bool = False,
-) -> Dataset:
-    """
-    Save a dataset.
-    """
-    data = Dataset.load_from_disk(dataset_path)
-    logger.info("Dataset loaded from %s.", dataset_path)
-    if verbose:
-        print(data[0])
-        print(data[-1])
-        logger.info("Dataset features: %s", data.features)
-        logger.info("Number of samples: %s", len(data))
-
-    return data
