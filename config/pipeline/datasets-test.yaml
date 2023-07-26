@@ -19,7 +19,7 @@ steps:
     with:
       tokenizer_config_name: mecab
       # batch_size: 3
-      num_workers: 50
+      num_workers: 1
       text_col: cleaned_text
       token_col: tokenizedText
       load_from_cache_file: false
@@ -28,7 +28,7 @@ steps:
     with:
       tokenizer_config_name: kakao
       # batch_size: 3
-      num_workers: 50
+      num_workers: 1
       token_col: tokenizedText
       nouns_only: true
       load_from_cache_file: false
