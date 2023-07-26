@@ -30,7 +30,7 @@ steps:
       tokenizer_config_name: mecab
       # batch_size: 3
       num_workers: 50
-      text_col: bodyText
+      text_col: cleaned_text
       token_col: tokenizedText
       load_from_cache_file: false
       verbose: true
