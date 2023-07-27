@@ -6,6 +6,10 @@ defaults:
   - /pipe@pipe_tokenize: dataset_tokenize
   - /pipe@pipe_sample: dataset_sample
   - /pipe@pipe_extract: dataset_extract_tokens
+  - /pipe@pipe_to_pandas: dataset_to_pandas
+  - /pipe@pipe_head: pandas_print_head
+  - /pipe@pipe_save_df: dataframe_save
+  - /pipe@pipe_find_similar: find_similar_docs
 
 use_task_as_initial_object: true
 steps:
