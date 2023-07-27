@@ -1,0 +1,41 @@
+defaults:
+  - datasets
+
+use_task_as_initial_object: true
+steps:
+  - uses: pipe_load
+    with:
+      dataset_path: datasets/processed/kakao_nouns
+      verbose: true
+  # - uses: pipe_sample
+  #   with:
+  #     num_samples: 1000
+  #     randomize: true
+  #     verbose: true
+  - uses: pipe_to_pandas
+    verbose: true
+  - uses: pipe_head
+    verbose: true
+  - uses: pipe_find_similar
+    with:
+      num_workers: 100
+      min_num_docs: 3
+      percentile: 90
+      distance_threshold: 0.3
+      linkage: average
+      grouping_freq: W
+      grouping_name: Week
+      date_col: createdDt
+      token_col: nouns
+      id_col: newsId
+      ordering_col: createdDt_int
+      duplicate_col: duplicate
+      fig_col: fig_filename
+      output_dir: outputs/figures/kakao_similar_7
+      show_fig: false
+      save_fig: true
+      verbose: true
+    verbose: true
+  - uses: pipe_save_df
+    with:
+      data_file: datasets/processed/kakao_nouns_similar_7.parquet
