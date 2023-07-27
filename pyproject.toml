@@ -73,6 +73,7 @@ exclude = [
     "venv",
     ".copier-template",
     ".refs",
+    "workspace",
 ]
 per-file-ignores = ['__init__.py:F401', '_version.py:W292']
 
