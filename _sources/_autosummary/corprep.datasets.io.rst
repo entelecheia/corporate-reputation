@@ -13,9 +13,7 @@ corprep.datasets.io
 
    .. autosummary::
    
-      load_dataset
       load_raw_dataset
-      save_dataset
    
    
 

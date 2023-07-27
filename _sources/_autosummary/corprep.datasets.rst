@@ -34,6 +34,6 @@ corprep.datasets
    :recursive:
 
    corprep.datasets.io
-   corprep.datasets.sample
+   corprep.datasets.similarity
    corprep.datasets.tokenize
 

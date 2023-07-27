@@ -15,8 +15,8 @@ corprep.absa.config
    
       append_to_jsonl
       call_api
-      create_api
       parse_response_to_json
+      request_api
    
    
 

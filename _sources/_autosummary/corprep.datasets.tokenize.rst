@@ -13,6 +13,7 @@ corprep.datasets.tokenize
 
    .. autosummary::
    
+      extract_tokens
       tokenize_dataset
    
    

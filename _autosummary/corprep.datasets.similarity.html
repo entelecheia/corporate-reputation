@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>corprep.absa.config &#8212; Reputation Analysis of Companies and CEOs</title>
+    <title>corprep.datasets.similarity &#8212; Reputation Analysis of Companies and CEOs</title>
   
   
   
@@ -85,7 +85,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '_autosummary/corprep.absa.config';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_autosummary/corprep.datasets.similarity';</script>
     <link rel="shortcut icon" href="https://assets.entelecheia.ai/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -254,7 +254,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/entelecheia/corporate-reputation/edit/main/book/_autosummary/corprep.absa.config.rst" target="_blank"
+      <li><a href="https://github.com/entelecheia/corporate-reputation/edit/main/book/_autosummary/corprep.datasets.similarity.rst" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -271,7 +271,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/entelecheia/corporate-reputation/issues/new?title=Issue%20on%20page%20%2F_autosummary/corprep.absa.config.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/entelecheia/corporate-reputation/issues/new?title=Issue%20on%20page%20%2F_autosummary/corprep.datasets.similarity.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -301,7 +301,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/_autosummary/corprep.absa.config.rst" target="_blank"
+      <li><a href="../_sources/_autosummary/corprep.datasets.similarity.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -381,7 +381,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>corprep.absa.config</h1>
+    <h1>corprep.datasets.similarity</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -395,8 +395,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="module-corprep.absa.config">
-<span id="corprep-absa-config"></span><h1>corprep.absa.config<a class="headerlink" href="#module-corprep.absa.config" title="Permalink to this heading">#</a></h1>
+  <section id="module-corprep.datasets.similarity">
+<span id="corprep-datasets-similarity"></span><h1>corprep.datasets.similarity<a class="headerlink" href="#module-corprep.datasets.similarity" title="Permalink to this heading">#</a></h1>
 <p class="rubric">Functions</p>
 <table class="autosummary longtable table autosummary">
 <colgroup>
@@ -404,32 +404,17 @@ document.write(`
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">append_to_jsonl</span></code>(data, filename[, encoding])</p></td>
-<td><p>Append a json payload to the end of a jsonl file.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_similar_docs</span></code>(data[, num_workers, ...])</p></td>
+<td><p>Finds similar documents in the given data using cosine similarity and Agglomerative Clustering.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_api</span></code>(agent, args[, delay_in_seconds])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_dendrogram</span></code>(model, **kwargs)</p></td>
+<td><p>Plots the hierarchical clustering dendrogram.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_response_to_json</span></code>(response, usage, text)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_similarity_distribution</span></code>(similarity_matrix)</p></td>
+<td><p>Plots the distribution of cosine similarities between pairs of documents.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">request_api</span></code>(agent, args[, delay_in_seconds])</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Classes</p>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">AbsaModel</span></code>(*[, api_key, model_name, ...])</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PromptConfig</span></code>(*[, tasks, prompts])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">process_batch</span></code>(data[, min_num_docs, ...])</p></td>
+<td><p>Processes a batch of data by calculating the cosine similarity between all pairs of documents in the batch.</p></td>
 </tr>
 </tbody>
 </table>
