@@ -1,0 +1,6 @@
+defaults:
+  - __general_external_funcs__
+  - /run: find_similar_docs
+
+use_pipe_obj: true
+return_pipe_obj: false
