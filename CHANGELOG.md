@@ -1,5 +1,18 @@
 <!--next-version-placeholder-->
 
+## v0.9.0 (2023-07-27)
+
+### Feature
+
+* **corprep:** Add thematos plugin ([`45ae7f3`](https://github.com/entelecheia/corporate-reputation/commit/45ae7f333d76629fe746319109048f3c30b19bbc))
+* **pyproject:** Add thematos dependency ([`6253d99`](https://github.com/entelecheia/corporate-reputation/commit/6253d99e8e94e1dfd34c2b4a16f9e84ad8780498))
+* **book:** Add data.md in supplementary with filtering details ([`a8ed8ca`](https://github.com/entelecheia/corporate-reputation/commit/a8ed8ca6a0f65f09f3effc5391ab80e9ce04f385))
+* **corprep:** Add dataset_to_pandas and pandas_print_head configuration files ([`834f55b`](https://github.com/entelecheia/corporate-reputation/commit/834f55b536cc7821a6725dab926f6a139ec83ead))
+* **similarity.py:** Add multiple data-processing and plotting functions, switch clustering method from DBSCAN to Agglomerative Clustering ([`4f38cba`](https://github.com/entelecheia/corporate-reputation/commit/4f38cba731d27845f4da8861cdd5b76b57138112))
+* **corprep:** Add yaml configurations for saving dataframes ([`5e5b235`](https://github.com/entelecheia/corporate-reputation/commit/5e5b235d1fd36d0068e82687717bba39872cf3c3))
+* **corprep:** Add find_similar_docs configuration ([`c468597`](https://github.com/entelecheia/corporate-reputation/commit/c4685976e225967ff7cec3e24820ab0d18a912d9))
+* **config:** Add new pipeline and task configuration for dataset simulation ([`3710f93`](https://github.com/entelecheia/corporate-reputation/commit/3710f93d574a08a8a2b942c7b1ec8a721e963893))
+
 ## v0.8.0 (2023-07-26)
 
 ### Feature
