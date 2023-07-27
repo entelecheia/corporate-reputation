@@ -1,7 +1,7 @@
 import multiprocessing as mp
 from functools import partial
-from typing import Optional, Tuple
 from pathlib import Path
+from typing import Optional, Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
