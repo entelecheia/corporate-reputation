@@ -2836,6 +2836,21 @@ files = [
 ]
 
 [[package]]
+name = "thematos"
+version = "0.2.0"
+description = "A Python Library for Topic Modeling"
+optional = false
+python-versions = ">=3.8.1,<3.12"
+files = [
+    {file = "thematos-0.2.0-py3-none-any.whl", hash = "sha256:587fe615515b214017c0b3e1859ee203ee8ebedb83e9733e3784be2cccccefb8"},
+    {file = "thematos-0.2.0.tar.gz", hash = "sha256:ebcac5a754b2e6fcfe98dea09601d62bd843f2a97ecaf290ba4205924d2297ac"},
+]
+
+[package.dependencies]
+click = ">=8.1.3,<9.0.0"
+hyfi = ">=1.11.0,<2.0.0"
+
+[[package]]
 name = "threadpoolctl"
 version = "3.2.0"
 description = "threadpoolctl"
@@ -2859,13 +2874,13 @@ files = [
 
 [[package]]
 name = "tomlkit"
-version = "0.11.8"
+version = "0.12.0"
 description = "Style preserving TOML library"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "tomlkit-0.11.8-py3-none-any.whl", hash = "sha256:8c726c4c202bdb148667835f68d68780b9a003a9ec34167b6c673b38eff2a171"},
-    {file = "tomlkit-0.11.8.tar.gz", hash = "sha256:9330fc7faa1db67b541b28e62018c17d20be733177d290a13b24c62d1614e0c3"},
+    {file = "tomlkit-0.12.0-py3-none-any.whl", hash = "sha256:926f1f37a1587c7a4f6c7484dae538f1345d96d793d9adab5d3675957b1d0766"},
+    {file = "tomlkit-0.12.0.tar.gz", hash = "sha256:01f0477981119c7d8ee0f67ebe0297a7c95b14cf9f4b102b45486deb77018716"},
 ]
 
 [[package]]
@@ -3198,4 +3213,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<3.12"
-content-hash = "d85905ad3eef6536b7b9a4770c0d1d885455356169f70339d24b1e9df9921cca"
+content-hash = "0e04565c5c7469fe4d4a32c8faafb200576f724ded94963a1e86b7b92308c130"

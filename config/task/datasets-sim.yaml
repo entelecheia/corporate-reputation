@@ -1,0 +1,3 @@
+defaults:
+  - datasets
+  - override /pipeline@ds_pipeline: datasets-sim

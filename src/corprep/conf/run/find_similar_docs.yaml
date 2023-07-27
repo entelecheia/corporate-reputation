@@ -1,0 +1,18 @@
+_target_: corprep.datasets.similarity.find_similar_docs
+num_workers: 2
+min_num_docs: 5
+percentile: 80
+distance_threshold:
+linkage: average
+grouping_freq: W
+grouping_name: Week
+date_col: createdDt
+token_col: nouns
+id_col: newsId
+ordering_col: createdDt_int
+duplicate_col: duplicate
+fig_col: fig_filename
+output_dir: .
+show_fig: false
+save_fig: false
+verbose: false
