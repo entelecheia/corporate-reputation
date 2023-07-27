@@ -10,6 +10,7 @@ date_col: createdDt
 token_col: nouns
 id_col: newsId
 ordering_col: createdDt_int
+cluster_col: cluster
 duplicate_col: duplicate
 fig_col: fig_filename
 output_dir: .
