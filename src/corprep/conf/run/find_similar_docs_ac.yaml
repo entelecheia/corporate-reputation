@@ -1,8 +1,8 @@
-_target_: corprep.datasets.similarity.find_similar_docs
+_target_: corprep.datasets.similarity.find_similar_docs_ac
 num_workers: 2
 min_num_docs: 5
 percentile: 80
-distance_threshold:
+distance_threshold: null
 linkage: average
 grouping_freq: W
 grouping_name: Week
