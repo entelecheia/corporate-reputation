@@ -1184,20 +1184,20 @@ packaging = "*"
 
 [[package]]
 name = "hyfi"
-version = "1.11.0"
+version = "1.12.1"
 description = "Hydra Fast Interface (Hydra and Pydantic based interface framework)"
 optional = false
 python-versions = ">=3.8.1,<3.12"
 files = [
-    {file = "hyfi-1.11.0-py3-none-any.whl", hash = "sha256:4413dc6710e3d52d97beea035b93820ed6707a59c2137c9d5efb0de088002bd4"},
-    {file = "hyfi-1.11.0.tar.gz", hash = "sha256:b221ebe736ab6855a37db6601ef9e051f9ed1dc2dbd9fbdaa1f4584697184947"},
+    {file = "hyfi-1.12.1-py3-none-any.whl", hash = "sha256:8fc7a215532c43bb0b1054cce75de5ab32f951eb0e01518c4b599139e8ccdf6b"},
+    {file = "hyfi-1.12.1.tar.gz", hash = "sha256:4e174836c6ad11913209237e16898eeebeb90cc7b58c5aa188f86d33cd870221"},
 ]
 
 [package.dependencies]
 chardet = "<=5.1.0"
 click = "<=8.1.6"
 colorama = ">=0.4.3,<0.5.0"
-datasets = ">=2.0.0,<=2.14"
+datasets = ">=2.0.0,<=2.14.1"
 filelock = ">=3.4,<=3.12.2"
 gdown = "<=4.6.6"
 huggingface-hub = ">=0.8.1,<=0.16.4"
@@ -1451,20 +1451,20 @@ files = [
 
 [[package]]
 name = "lexikanon"
-version = "0.3.1"
+version = "0.3.2"
 description = "A Python Library for Tokenizers"
 optional = false
 python-versions = ">=3.8.1,<3.12"
 files = [
-    {file = "lexikanon-0.3.1-py3-none-any.whl", hash = "sha256:b29aaba5640b35d9e7dc59399a9185c6591a1ffe105d1813d02befc3ec397679"},
-    {file = "lexikanon-0.3.1.tar.gz", hash = "sha256:59f20c1ad2aff198c1495dfa94ac9099d17cd702af746dea702fcae53d5f7dde"},
+    {file = "lexikanon-0.3.2-py3-none-any.whl", hash = "sha256:54c7dac0eb3f53db3772652466bcf7bcb15f58ec10625d00188e8b79c560e58a"},
+    {file = "lexikanon-0.3.2.tar.gz", hash = "sha256:2d49693c7ffa8840e8f684f5eeae1462bb85911f7763d449862b3e1a64d8324f"},
 ]
 
 [package.dependencies]
 click = ">=8.1.3,<9.0.0"
 ekonlpy = ">=2.0.2,<3.0.0"
 ftfy = ">=6.1.1,<7.0.0"
-hyfi = ">=1.11.0,<2.0.0"
+hyfi = ">=1.12.0,<2.0.0"
 nltk = ">=3.8.1,<4.0.0"
 
 [[package]]
@@ -2837,18 +2837,18 @@ files = [
 
 [[package]]
 name = "thematos"
-version = "0.2.0"
+version = "0.2.1"
 description = "A Python Library for Topic Modeling"
 optional = false
 python-versions = ">=3.8.1,<3.12"
 files = [
-    {file = "thematos-0.2.0-py3-none-any.whl", hash = "sha256:587fe615515b214017c0b3e1859ee203ee8ebedb83e9733e3784be2cccccefb8"},
-    {file = "thematos-0.2.0.tar.gz", hash = "sha256:ebcac5a754b2e6fcfe98dea09601d62bd843f2a97ecaf290ba4205924d2297ac"},
+    {file = "thematos-0.2.1-py3-none-any.whl", hash = "sha256:9b6d96f6fc2cf8aa676bade7c2a10613f6264714fdf9f3d98c3995bd5b0e92ac"},
+    {file = "thematos-0.2.1.tar.gz", hash = "sha256:b6243d063dfb1e8dafc079dd243e508f492148de0d91be43f34194124b5d6897"},
 ]
 
 [package.dependencies]
 click = ">=8.1.3,<9.0.0"
-hyfi = ">=1.11.0,<2.0.0"
+hyfi = ">=1.12.0,<2.0.0"
 
 [[package]]
 name = "threadpoolctl"
@@ -3213,4 +3213,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<3.12"
-content-hash = "0e04565c5c7469fe4d4a32c8faafb200576f724ded94963a1e86b7b92308c130"
+content-hash = "2305cd2c730af7d73e3dbd5a784083ae9c342978cbce3ebdfdb9c8cba2ffe6a1"

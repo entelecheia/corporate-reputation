@@ -138,6 +138,7 @@ def process_batch(
     token_col: str = "nouns",
     id_col: str = "newsId",
     ordering_col: str = "createdDt_int",
+    cluster_col: str = "cluster",
     duplicate_col: str = "duplicate",
     fig_col: str = "fig_filename",
     output_dir: str = ".",
@@ -191,9 +192,10 @@ def process_batch(
 
     # Create DataFrame df with cluster labels and Unix timestamp createdDt
     df = pd.DataFrame(
-        {"cluster": ac.labels_, ordering_col: batch_data[ordering_col]},
+        {cluster_col: ac.labels_, ordering_col: batch_data[ordering_col]},
         index=batch_data[id_col],
     )
+    batch_data[cluster_col] = batch_data[id_col].map(df[cluster_col])
 
     # Convert createdDt_int to string and concatenate with newsId
     df[ordering_col] = df[ordering_col].astype(str)
@@ -201,7 +203,7 @@ def process_batch(
     df[concat_col] = df[ordering_col] + "|" + df.index
 
     # Find the minimum createdDt_newsId for each cluster
-    min_createdDt_newsId = df.groupby("cluster")[concat_col].min()
+    min_createdDt_newsId = df.groupby(cluster_col)[concat_col].min()
 
     # Extract newsId from the minimum createdDt_newsId
     earliest_doc_indices = min_createdDt_newsId.str.split("|").str[-1]
@@ -210,7 +212,7 @@ def process_batch(
     return batch_data
 
 
-def find_similar_docs(
+def find_similar_docs_ac(
     data: pd.DataFrame,
     num_workers: int = 2,
     min_num_docs: int = 5,
@@ -223,6 +225,7 @@ def find_similar_docs(
     token_col: str = "nouns",
     id_col: str = "newsId",
     ordering_col: str = "createdDt_int",
+    cluster_col: str = "cluster",
     duplicate_col: str = "duplicate",
     fig_col: str = "fig_filename",
     output_dir: str = ".",
@@ -238,6 +241,7 @@ def find_similar_docs(
     # Convert createdDt to Unix timestamp and store in createdDt_int
     data[ordering_col] = data[date_col].astype(np.int64) // 10**9
     data.set_index(date_col, inplace=True)
+    data[cluster_col] = None
     data[duplicate_col] = False
     data[fig_col] = None
 
@@ -259,6 +263,7 @@ def find_similar_docs(
         token_col=token_col,
         id_col=id_col,
         ordering_col=ordering_col,
+        cluster_col=cluster_col,
         duplicate_col=duplicate_col,
         fig_col=fig_col,
         output_dir=output_dir,

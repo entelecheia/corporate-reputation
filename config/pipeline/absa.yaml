@@ -1,9 +1,9 @@
 defaults:
   - __init__
-  - /pipe@pipe_load: dataset_load_from_disk
+  - /pipe@pipe_load: load_dataset_from_disk
   - /pipe@pipe_predict: absa_agent_predict
-  - /pipe@pipe_sample: dataset_sample
-  - /pipe@pipe_save: dataset_save_to_disk
+  - /pipe@pipe_sample: sample_dataset
+  - /pipe@pipe_save: save_dataset_to_disk
 
 use_task_as_initial_object: true
 steps:
