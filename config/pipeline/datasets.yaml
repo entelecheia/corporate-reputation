@@ -1,11 +1,11 @@
 defaults:
   - __init__
   - /pipe@pipe_load_raw: dataset_load_raw
-  - /pipe@pipe_load: dataset_load_from_disk
-  - /pipe@pipe_save: dataset_save_to_disk
-  - /pipe@pipe_tokenize: dataset_tokenize
-  - /pipe@pipe_sample: dataset_sample
-  - /pipe@pipe_extract: dataset_extract_tokens
+  - /pipe@pipe_load: load_dataset_from_disk
+  - /pipe@pipe_save: save_dataset_to_disk
+  - /pipe@pipe_tokenize: tokenize_dataset
+  - /pipe@pipe_sample: sample_dataset
+  - /pipe@pipe_extract: extract_tokens
   - /pipe@pipe_to_pandas: dataset_to_pandas
   - /pipe@pipe_head: pandas_print_head
   - /pipe@pipe_save_df: dataframe_save
