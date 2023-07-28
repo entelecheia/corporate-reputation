@@ -1,5 +1,20 @@
 <!--next-version-placeholder-->
 
+## v0.9.1 (2023-07-28)
+
+### Fix
+
+* **dependencies:** Upgrade hyfi to 1.12.1 ([`21c83f5`](https://github.com/entelecheia/corporate-reputation/commit/21c83f5ae591290b150c058e4b14121171345b47))
+* **pipeline:** Rename dataset_load_raw to load_raw_dataset, add file_pattern and set verbose to false ([`74cd0c2`](https://github.com/entelecheia/corporate-reputation/commit/74cd0c2f54e05aaea8db28bcd3884e190151bab2))
+* **corprep:** Add load_raw_dataset configuration ([`fa0b9be`](https://github.com/entelecheia/corporate-reputation/commit/fa0b9be9f3b4add371805a78103465783712197b))
+* **corprep:** Remove specific tasks and columns in absa_agent_predict.yaml ([`2debf24`](https://github.com/entelecheia/corporate-reputation/commit/2debf2483a332adf05058f78cd9ee1c7970de091))
+* **absa_agent_predict:** Add null value to pipe_obj_arg_name property ([`99a6473`](https://github.com/entelecheia/corporate-reputation/commit/99a64730b0b3152215d7b420f89769d37086f421))
+* **find_similar_docs:** Rename to find_similar_docs_ac.yaml ([`fc62043`](https://github.com/entelecheia/corporate-reputation/commit/fc620431873dd40b9a7b63dcf2bc9db3f0dc4404))
+* **pipeline:** Rename dataset related functions for clarity ([`90ab34e`](https://github.com/entelecheia/corporate-reputation/commit/90ab34eaa656a6c1a138c4e74dcbf086c890ec61))
+* **pipeline:** Reduce defaults in absa-kakao and gpt35 configurations ([`91b4e7c`](https://github.com/entelecheia/corporate-reputation/commit/91b4e7c29493b1eae5b6141a7493aa8fe4aff19a))
+* **dependencies:** Upgrade lexikanon to 0.3.2, thematos to 0.2.1 ([`85257e4`](https://github.com/entelecheia/corporate-reputation/commit/85257e499f9b70b96b39e17d213e427a703b64c6))
+* **corprep:** Add 'cluster' column to DataFrame in similar_docs functions ([`1903b6f`](https://github.com/entelecheia/corporate-reputation/commit/1903b6ff12996ecf70c677e9df5493d866e792a4))
+
 ## v0.9.0 (2023-07-27)
 
 ### Feature
