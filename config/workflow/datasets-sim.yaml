@@ -1,9 +1,9 @@
 # @package _global_
 defaults:
   - corprep
-  - override /task@ds_task: datasets-test
+  - override /task@ds_task: datasets-sim
 
-workflow_name: datasets-test
+workflow_name: datasets-sim
 tasks:
   - ds_task
   # - absa_task
