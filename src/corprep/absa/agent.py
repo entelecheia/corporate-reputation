@@ -39,7 +39,7 @@ def batch_predict(
     return {f"{task}_pred": res}
 
 
-def predict(
+def absa_agent_predict(
     dataset: Dataset,
     tasks=None,
     absa_config_name: str = "default",
