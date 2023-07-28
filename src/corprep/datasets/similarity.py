@@ -212,7 +212,7 @@ def process_batch(
     return batch_data
 
 
-def find_similar_docs(
+def find_similar_docs_ac(
     data: pd.DataFrame,
     num_workers: int = 2,
     min_num_docs: int = 5,
