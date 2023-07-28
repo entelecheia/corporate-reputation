@@ -9,7 +9,7 @@ defaults:
   - /pipe@pipe_to_pandas: dataset_to_pandas
   - /pipe@pipe_head: pandas_print_head
   - /pipe@pipe_save_df: dataframe_save
-  - /pipe@pipe_find_similar: find_similar_docs
+  - /pipe@pipe_find_similar: find_similar_docs_ac
 
 use_task_as_initial_object: true
 steps:
