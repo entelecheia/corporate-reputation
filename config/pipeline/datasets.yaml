@@ -1,6 +1,6 @@
 defaults:
   - __init__
-  - /pipe@pipe_load_raw: dataset_load_raw
+  - /pipe@pipe_load_raw: load_raw_dataset
   - /pipe@pipe_load: load_dataset_from_disk
   - /pipe@pipe_save: save_dataset_to_disk
   - /pipe@pipe_tokenize: tokenize_dataset

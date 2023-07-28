@@ -1,4 +1,5 @@
 _target_: corprep.datasets.io.load_raw_dataset
-raw_dataset_dir:
+raw_dataset_dir: null
 path: json
-verbose: ${oc.select:..verbose, false}
+file_pattern: '*.dat'
+verbose: false
