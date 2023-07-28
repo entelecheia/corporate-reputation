@@ -1,7 +1,0 @@
-defaults:
-  - __general_external_funcs__
-  - /run: load_raw_dataset
-
-run:
-  path: json
-use_pipe_obj: false
