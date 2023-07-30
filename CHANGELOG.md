@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.9.2 (2023-07-30)
+
+### Fix
+
+* **corprep:** Add hyabsa to plugins ([`6dbea3f`](https://github.com/entelecheia/corporate-reputation/commit/6dbea3f402c0c94c1fced6f2f4856aef3fb6b8f9))
+* **dependencies:** Upgrade hyfi to 1.12.5 and add hyfi-absa 0.1.0 ([`b0c679c`](https://github.com/entelecheia/corporate-reputation/commit/b0c679c6b3a9bd2577329f9bf74ea67c5024e2c4))
+
 ## v0.9.1 (2023-07-28)
 
 ### Fix
