@@ -1,9 +1,0 @@
-_target_: hyfi.utils.datasets.DATASETs.save_dataframes
-data:
-data_file:
-data_dir:
-columns:
-index: false
-filetype: parquet
-suffix:
-verbose: ${oc.select:..verbose, false}
