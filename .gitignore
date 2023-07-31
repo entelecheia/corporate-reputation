@@ -1,5 +1,6 @@
 # Workspace
 workspace/
+secrets/**/*
 
 # hypothesis: https://github.com/HypothesisWorks/hypothesis
 .hypothesis/
