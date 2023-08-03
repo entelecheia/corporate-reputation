@@ -1,0 +1,6 @@
+defaults:
+  - absa
+  - override /agent: corprep-gpt3
+
+_config_name_: corprep-gpt3
+text_col: cleaned_text
