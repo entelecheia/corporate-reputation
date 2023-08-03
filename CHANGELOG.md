@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.12.0 (2023-08-03)
+
+### Feature
+
+* **corprep:** Add revision1 for more detailed sentiment task description ([`03edfb2`](https://github.com/entelecheia/corporate-reputation/commit/03edfb2c669cb691927b5bcd66c10e32839e4185))
+
 ## v0.11.0 (2023-08-03)
 
 ### Feature
