@@ -3,11 +3,13 @@ defaults:
   - __init__
   - /pipeline@noun: datasets-noun
   - /pipeline@similar: datasets-similar
+  - /pipeline@filter: datasets-filter
   - /pipeline@dtest: datasets-test
   - override /project: corprep
 
 workflow_name: corprep
 verbose: true
 pipelines:
-  - noun
-  - similar
+  # - noun
+  # - similar
+  - filter
