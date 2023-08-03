@@ -1,5 +1,13 @@
 <!--next-version-placeholder-->
 
+## v0.9.3 (2023-08-03)
+
+### Fix
+
+* **corprep:** Add secrets directory initialization ([`0bce74f`](https://github.com/entelecheia/corporate-reputation/commit/0bce74ffede7569b36b51760a8b53738648120e9))
+* **pipeline:** Replace dataframe_save with save_dataframes, remove redundant dataframe_save and save_dataframes files ([`666226a`](https://github.com/entelecheia/corporate-reputation/commit/666226a430272cbcc9f38c776fb360e298411020))
+* **dependencies:** Upgrade hyfi to 1.13.0 ([`41eb5e8`](https://github.com/entelecheia/corporate-reputation/commit/41eb5e8ac93c7da18c1353284707f9d7b4c355b9))
+
 ## v0.9.2 (2023-07-30)
 
 ### Fix
