@@ -1,5 +1,14 @@
 <!--next-version-placeholder-->
 
+## v0.10.0 (2023-08-03)
+
+### Feature
+
+* **config/runner:** Add new gpt3 and gpt4 test configuration files ([`be6e168`](https://github.com/entelecheia/corporate-reputation/commit/be6e168ec944d8634b697c40e5f7e2692551341f))
+* **corprep-conf-runner:** Add corprep-gpt3 and corprep-gpt4 configuration files ([`c82df5e`](https://github.com/entelecheia/corporate-reputation/commit/c82df5e068236c1eba8a6920a2a18d71ddd2ed69))
+* **corprep:** Add gpt3 and gpt4 agent configurations ([`b2a52cd`](https://github.com/entelecheia/corporate-reputation/commit/b2a52cdb0227da2f011fdeda2e36d68a9e23a1b3))
+* **corprep:** Add config for TRIPLE and QUAD tasks in prompts ([`cd8d7e4`](https://github.com/entelecheia/corporate-reputation/commit/cd8d7e42df41ea8a079873b2e51904f400422a10))
+
 ## v0.9.3 (2023-08-03)
 
 ### Fix
