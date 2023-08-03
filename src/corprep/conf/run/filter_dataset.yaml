@@ -1,0 +1,9 @@
+_target_: corprep.datasets.filter.filter_dataset
+queries: null
+sample_size: 100
+sample_seed: 42
+output_dir: .
+sample_filename: sample.parquet
+train_filename: train.parquet
+discard_filename: discard.parquet
+verbose: false
