@@ -6,5 +6,5 @@ _config_name_: corprep-gpt4-${.name}
 name: sample
 
 top_n: 100
-batch_size: 1
+batch_size: 10
 num_workers: 10
