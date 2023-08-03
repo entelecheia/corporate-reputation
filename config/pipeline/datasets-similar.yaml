@@ -38,4 +38,4 @@ steps:
     verbose: true
   - uses: pipe_save_df
     with:
-      data_file: datasets/processed/kakao_nouns_similar_7.parquet
+      data_file: datasets/processed/kakao_nouns_similar_6.parquet
