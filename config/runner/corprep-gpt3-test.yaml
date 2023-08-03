@@ -1,0 +1,19 @@
+defaults:
+  - corprep-gpt3
+
+_config_name_: corprep-gpt3-test
+
+top_n: 10
+data_load:
+  path: parquet
+  data_files:
+    - ${get_original_cwd:}/workspace/datasets/processed/kakao_nouns_similar_6.parquet
+  split: train
+
+data_save:
+  dataset_path: ${get_original_cwd:}/workspace/datasets/abas_results/gpt3-test
+
+agent:
+  output_dir: ${get_original_cwd:}/workspace/outputs/predictions/gpt3-test
+  verbose: true
+verbose: true
