@@ -35,6 +35,8 @@ def filter_dataset(
         data_file=f"{output_dir}/{sample_filename}",
         verbose=verbose,
     )
+    if verbose:
+        print(sample.head())
 
     # Create a train set
     train = data_[~data_.index.isin(sample.index)]
@@ -43,6 +45,8 @@ def filter_dataset(
         data_file=f"{output_dir}/{train_filename}",
         verbose=verbose,
     )
+    if verbose:
+        print(train.head())
 
     # Create a discard set
     discard = data[~data.index.isin(train.index) & ~data.index.isin(sample.index)]
@@ -51,6 +55,8 @@ def filter_dataset(
         data_file=f"{output_dir}/{discard_filename}",
         verbose=verbose,
     )
+    if verbose:
+        print(discard.head())
     logger.info(
         "Created %d samples, %d train samples, and %d discard samples",
         sample.shape[0],
@@ -94,8 +100,10 @@ def filter_by_queries(
     for qry in queries:
         if verbose:
             logger.info("filtering data by %s", qry)
+            print(f"fitering data by {qry}")
         n_docs = data.shape[0]
         data = data.query(qry, engine="python")
         if verbose:
             logger.info("filtered %d documents", n_docs - data.shape[0])
+            print(f"filtered {n_docs - data.shape[0]} documents")
     return data
