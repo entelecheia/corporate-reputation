@@ -1,0 +1,5 @@
+defaults:
+  - corprep-gpt3
+  - override /llm: gpt4
+
+_config_name_: corprep-gpt4

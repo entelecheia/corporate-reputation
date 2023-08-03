@@ -1,0 +1,7 @@
+defaults:
+  - absa
+  - override /prompts: corprep
+
+_config_name_: corprep-gpt3
+task: QUAD
+prompt: base
