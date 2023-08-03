@@ -1,0 +1,21 @@
+defaults:
+  - datasets
+
+use_task_as_initial_object: true
+steps:
+  - uses: pipe_load_dfs
+    with:
+      data_files: datasets/processed/kakao_nouns_similar_6.parquet
+      split: train
+      verbose: true
+  - uses: pipe_head
+    verbose: true
+  - uses: pipe_filter
+    with:
+      queries:
+        - "duplicate == False"
+        - "cleaned_text.str.split().str.len() > 15"
+      sample_size: 100
+      sample_seed: 123
+      output_dir: datasets/filtered/kakao_deduped
+      verbose: true
