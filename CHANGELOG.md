@@ -1,5 +1,16 @@
 <!--next-version-placeholder-->
 
+## v0.11.0 (2023-08-03)
+
+### Feature
+
+* **config/runner:** Add new configuration files for GPT3 and GPT4 ([`6d83abc`](https://github.com/entelecheia/corporate-reputation/commit/6d83abc7d1ed48ce088c8fa135355f1359faf6e2))
+* **pipeline:** Add new dataset filter and load steps ([`441e063`](https://github.com/entelecheia/corporate-reputation/commit/441e063c7d8ab923fcf5e017a04bc6cb2b0dfddd))
+* **corprep:** Add filter pipeline in config and comment out noun and similar pipelines ([`6bbd818`](https://github.com/entelecheia/corporate-reputation/commit/6bbd818c635303a07a6a979513ce94e847867d75))
+* **filter:** Add verbose print statements. ([`08cf03e`](https://github.com/entelecheia/corporate-reputation/commit/08cf03ea14cf5d17856c87ea1d6bd222e785faae))
+* **corprep:** Add filter_dataset configuration files ([`6edb66f`](https://github.com/entelecheia/corporate-reputation/commit/6edb66f6f1462703a8dbc26efa8c5b19f19cb69f))
+* **corprep/datasets:** Add filter functionality to datasets ([`3a2835a`](https://github.com/entelecheia/corporate-reputation/commit/3a2835ab2e10b6bb3fccdf0c1e7bb7fc8dc55cc1))
+
 ## v0.10.0 (2023-08-03)
 
 ### Feature
