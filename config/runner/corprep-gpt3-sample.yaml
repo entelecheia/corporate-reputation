@@ -1,0 +1,18 @@
+defaults:
+  - corprep-gpt3
+
+_config_name_: corprep-gpt3-${.name}
+name: sample
+top_n: 10
+data_load:
+  path: parquet
+  data_files: ${get_original_cwd:}/workspace/datasets/filtered/kakao_deduped/${..name}.parquet
+  split: train
+
+data_save:
+  dataset_path: ${get_original_cwd:}/workspace/datasets/abas_results/${.._config_name_}
+
+agent:
+  output_dir: ${get_original_cwd:}/workspace/outputs/predictions/${.._config_name_}
+  verbose: true
+verbose: true

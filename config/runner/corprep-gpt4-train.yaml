@@ -1,0 +1,6 @@
+defaults:
+  - corprep-gpt4-sample
+
+name: train
+
+top_n: 10
