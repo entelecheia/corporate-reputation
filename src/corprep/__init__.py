@@ -12,6 +12,7 @@ HyFI.initialize_global_hyfi(
     package_path=__package_path__,
     version=__version__,
     plugins=["lexikanon", "thematos", "hyabsa"],
+    secrets_dir="secrets",
 )
 
 # Initialize the logger
