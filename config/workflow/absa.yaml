@@ -1,9 +1,0 @@
-# @package _global_
-defaults:
-  - corprep
-  - override /task@absa_task: absa-test
-
-workflow_name: absa
-tasks:
-  # - ds_task
-  - absa_task
