@@ -1,12 +1,13 @@
 # @package _global_
 defaults:
   - __init__
-  - /task@ds_task: datasets
-  - /task@absa_task: absa
+  - /pipeline@noun: datasets-noun
+  - /pipeline@similar: datasets-similar
+  - /pipeline@dtest: datasets-test
   - override /project: corprep
 
 workflow_name: corprep
 verbose: true
-tasks:
-  - ds_task
-  - absa_task
+pipelines:
+  - noun
+  - similar

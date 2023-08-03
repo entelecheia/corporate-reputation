@@ -14,15 +14,15 @@ corprep = 'corprep.__cli__:main'
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<3.12"
-hyfi = "^1.13.0"
+hyfi = "^1.17.2"
 openai = "^0.27.8"
 backoff = "^2.2.1"
 scikit-learn = "^1.3.0"
-lexikanon = ">=0.3.2,<0.5.0"
+lexikanon = "^0.4.1"
 # lexikanon = { path = "../lexikanon", develop = true }
 # hyfi = { path = "../hyfi", develop = true }
-thematos = "^0.2.2"
-hyfi-absa = "^0.1.0"
+thematos = "^0.2.3"
+hyfi-absa = "^0.3.0"
 
 [tool.poetry.group.dev]
 optional = true

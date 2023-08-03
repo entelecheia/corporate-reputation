@@ -21,7 +21,7 @@ steps:
       num_workers: 100
       min_num_docs: 3
       percentile: 90
-      distance_threshold: 0.3
+      distance_threshold: 0.4
       linkage: average
       grouping_freq: W
       grouping_name: Week
@@ -31,7 +31,7 @@ steps:
       ordering_col: createdDt_int
       duplicate_col: duplicate
       fig_col: fig_filename
-      output_dir: outputs/figures/kakao_similar_7
+      output_dir: outputs/figures/kakao_similar_6
       show_fig: false
       save_fig: true
       verbose: true

@@ -1,8 +1,0 @@
-# @package _global_
-defaults:
-  - corprep
-
-workflow_name: datasets
-tasks:
-  - ds_task
-  # - absa_task

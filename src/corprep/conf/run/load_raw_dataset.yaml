@@ -1,5 +1,0 @@
-_target_: corprep.datasets.io.load_raw_dataset
-raw_dataset_dir: null
-path: json
-file_pattern: '*.dat'
-verbose: false
