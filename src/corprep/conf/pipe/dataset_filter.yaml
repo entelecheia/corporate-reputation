@@ -1,8 +1,0 @@
-defaults:
-  - __general_external_funcs__
-  - /run: filter_dataset
-
-use_pipe_obj: true
-return_pipe_obj: false
-# 은는이가도과와에의등
-# [ ()\'",·]

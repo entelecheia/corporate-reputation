@@ -1,0 +1,8 @@
+defaults:
+  - corprep-gpt3-sample
+  - override /agent: corprep-gpt4
+
+_config_name_: corprep-gpt4-${.name}
+name: sample
+
+top_n: 3
