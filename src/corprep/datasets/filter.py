@@ -1,4 +1,5 @@
-from typing import List, Union, Optional
+from typing import List, Optional, Union
+
 import pandas as pd
 
 from corprep import HyFI
