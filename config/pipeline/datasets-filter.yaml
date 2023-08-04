@@ -18,4 +18,5 @@ steps:
       sample_size: 100
       sample_seed: 123
       output_dir: datasets/filtered/kakao_deduped
+      sample_filename: sample.parquet
       verbose: true
