@@ -1468,13 +1468,13 @@ files = [
 
 [[package]]
 name = "lexikanon"
-version = "0.4.3"
+version = "0.5.0"
 description = "A Python Library for Tokenizers"
 optional = false
 python-versions = ">=3.8.1,<3.12"
 files = [
-    {file = "lexikanon-0.4.3-py3-none-any.whl", hash = "sha256:e2c3f92b1e9cc313622d16dc78a07a9081468ded5ef56a2d04ba7b01eda8aaff"},
-    {file = "lexikanon-0.4.3.tar.gz", hash = "sha256:9934fa6d696513a98d217aa121b01b27de15322b12c85af6ccd159adcb7de0e2"},
+    {file = "lexikanon-0.5.0-py3-none-any.whl", hash = "sha256:600ddb6f52f13708b5cd97471df35aa6ba9b50c1757303aaee62b319a015d2af"},
+    {file = "lexikanon-0.5.0.tar.gz", hash = "sha256:385f2a29386070c1c0a853d5b5e021913e834ec566bb178697db0b88db1a465c"},
 ]
 
 [package.dependencies]
@@ -1483,6 +1483,7 @@ ekonlpy = ">=2.0.2,<3.0.0"
 ftfy = ">=6.1.1,<7.0.0"
 hyfi = ">=1.18.1,<2.0.0"
 nltk = ">=3.8.1,<4.0.0"
+scikit-learn = ">=1.3.0,<2.0.0"
 
 [[package]]
 name = "markdown-it-py"
@@ -3228,4 +3229,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<3.12"
-content-hash = "767607a9ff34db353331c5182f5333e4ce6835cad880f3af3546435ff8ef1f9e"
+content-hash = "f745b36f526f2043341b6ae53c188e4ccf01f37921f8cbd15de69640b7506f9c"
