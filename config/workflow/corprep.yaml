@@ -10,7 +10,7 @@ defaults:
 workflow_name: corprep
 verbose: true
 pipelines:
-  # - noun
-  # - similar
+  - noun
+  - similar
   - filter
   # - dtest
