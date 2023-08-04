@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "corporate-reputation"
-version = "0.12.1"
+version = "0.12.2"
 description = "Unraveling Corporate and CEO Reputation using Aspect-Based Sentiment Analysis and Signal Modeling"
 authors = ["Young Joon Lee <entelecheia@hotmail.com>"]
 license = "MIT"

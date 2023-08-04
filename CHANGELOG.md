@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.12.2 (2023-08-04)
+
+### Fix
+
+* **pipeline:** Replace find_similar_docs_ac with find_similar_docs_by_clustering in datasets, change column names in datasets-similar.yaml ([`78ad328`](https://github.com/entelecheia/corporate-reputation/commit/78ad3284dcd656e36e3dfbd4879501d5358812b8))
+* **pipeline:** Update tokenizer parameter name ([`f96b9b1`](https://github.com/entelecheia/corporate-reputation/commit/f96b9b1af799675a21b2115e07cdf41d364c4630))
+
 ## v0.12.1 (2023-08-04)
 
 ### Fix
