@@ -13,3 +13,4 @@ pipelines:
   # - noun
   # - similar
   - filter
+  # - dtest
