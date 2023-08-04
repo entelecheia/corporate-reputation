@@ -18,7 +18,7 @@ steps:
     verbose: true
   - uses: pipe_find_similar
     with:
-      num_workers: 100
+      num_workers: 30
       min_num_docs: 3
       percentile: 90
       distance_threshold: 0.4
