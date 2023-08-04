@@ -1,5 +1,18 @@
 <!--next-version-placeholder-->
 
+## v0.12.1 (2023-08-04)
+
+### Fix
+
+* **tokenizer:** Update stopwords path in kakao config ([`8158062`](https://github.com/entelecheia/corporate-reputation/commit/815806279beecd43f1a1909edafa577f0283fabe))
+* **pipeline:** Increase sample size and adjust worker count, remove specific columns from removal list ([`28529da`](https://github.com/entelecheia/corporate-reputation/commit/28529da1a766a44993e97601e8616d2a3c75a8cd))
+* **workflow:** Enable noun and similar pipelines ([`f242a63`](https://github.com/entelecheia/corporate-reputation/commit/f242a63172bad13521fc5fcc0e38ee0a92b16042))
+* **pipeline:** Update filter_dataset to filter_and_sample_data ([`1e97c46`](https://github.com/entelecheia/corporate-reputation/commit/1e97c4655d40221105fb81392c3b20ae4fedb9b6))
+* **pipeline:** Change num_samples to sample_size in datasets-test.yaml ([`c9ba5cb`](https://github.com/entelecheia/corporate-reputation/commit/c9ba5cbe76d3911a7518956091e6aedcad51833b))
+* **pipeline:** Rename num_samples to sample_size in datasets-similar config ([`2cdc541`](https://github.com/entelecheia/corporate-reputation/commit/2cdc5413420042ec0f55167212a383c594fc21c7))
+* **pipeline:** Change num_samples to sample_size in datasets-noun configuration ([`5c32059`](https://github.com/entelecheia/corporate-reputation/commit/5c32059407d8d71d35b4ff257290fcfbabfa61c9))
+* **pipeline:** Add sample filename in datasets filter config ([`b0609d0`](https://github.com/entelecheia/corporate-reputation/commit/b0609d0ac71de93f81df14c25f3d6c4e14b2d33b))
+
 ## v0.12.0 (2023-08-03)
 
 ### Feature
