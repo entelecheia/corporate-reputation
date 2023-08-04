@@ -25,12 +25,11 @@ steps:
       linkage: average
       grouping_freq: W
       grouping_name: Week
-      date_col: createdDt
+      timestamp_col: createdDt
       token_col: nouns
       id_col: newsId
-      ordering_col: createdDt_int
       duplicate_col: duplicate
-      fig_col: fig_filename
+      dist_fig_col: dist_fig
       output_dir: outputs/figures/kakao_similar_6
       show_fig: false
       save_fig: true
