@@ -20,7 +20,7 @@ steps:
       verbose: true
   - uses: pipe_tokenize
     with:
-      tokenizer_config_name: mecab
+      tokenizer: mecab
       # batch_size: 3
       num_workers: 30
       text_col: cleaned_text
@@ -30,7 +30,7 @@ steps:
       verbose: true
   - uses: pipe_extract
     with:
-      tokenizer_config_name: kakao
+      tokenizer: kakao
       # batch_size: 3
       num_workers: 30
       token_col: tokenizedText
