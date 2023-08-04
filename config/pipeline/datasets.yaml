@@ -9,7 +9,7 @@ defaults:
   - /pipe@pipe_to_pandas: dataset_to_pandas
   - /pipe@pipe_head: pandas_print_head
   - /pipe@pipe_save_df: save_dataframes
-  - /pipe@pipe_find_similar: find_similar_docs_ac
+  - /pipe@pipe_find_similar: find_similar_docs_by_clustering
   - /pipe@pipe_filter: filter_and_sample_data
   - /pipe@pipe_load_dfs: load_dataframes
 
