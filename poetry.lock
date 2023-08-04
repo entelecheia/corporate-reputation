@@ -1219,19 +1219,19 @@ tqdm = ">=4.64.1,<5.0.0"
 
 [[package]]
 name = "hyfi-absa"
-version = "0.3.0"
+version = "0.3.1"
 description = "HyFI-ABSA is a Python package developed as a plugin for the Hydra Fast Interface (HyFI)."
 optional = false
 python-versions = ">=3.8.1,<3.12"
 files = [
-    {file = "hyfi_absa-0.3.0-py3-none-any.whl", hash = "sha256:8676bd930c226871ed9a0ad86a536ac0910aed185fa8db243a454582dce65d4f"},
-    {file = "hyfi_absa-0.3.0.tar.gz", hash = "sha256:27fdf05a39e5fea0d95822f49b250765e25095479e6b5bb775cea3a8b19d40f9"},
+    {file = "hyfi_absa-0.3.1-py3-none-any.whl", hash = "sha256:328277644a10bd9d37c72a91fda1d7d18b3dcd7e647322d6aa980e254f646cde"},
+    {file = "hyfi_absa-0.3.1.tar.gz", hash = "sha256:e746dadd4bd52318ee02b054fd4eb261514cd90db02610567559088b9fadd581"},
 ]
 
 [package.dependencies]
 backoff = ">=2.2.1,<3.0.0"
 click = ">=8.1.3,<9.0.0"
-hyfi = ">=1.17.2,<2.0.0"
+hyfi = ">=1.18.0,<2.0.0"
 openai = ">=0.27.8,<0.28.0"
 
 [[package]]
@@ -3228,4 +3228,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<3.12"
-content-hash = "f04b25c4a3212cb413d67e6a4122475031ab241b91cd77a3f1883859de2bf3d0"
+content-hash = "702eabd7eb3cc8e27ad8777c07c327fb812044b73dc5f9594e98e0d02c85e755"
