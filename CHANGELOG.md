@@ -1,5 +1,20 @@
 <!--next-version-placeholder-->
 
+## v0.13.0 (2023-08-07)
+
+### Feature
+
+* **corprep:** Add remove_columns function to dataset config ([`dd89120`](https://github.com/entelecheia/corporate-reputation/commit/dd89120d9101a66a3266fdc2ddc64b0bca707447))
+* **workflow:** Add datasets-save pipeline ([`7a9f1d1`](https://github.com/entelecheia/corporate-reputation/commit/7a9f1d18c70289d967c6dcb97a30edb4ae20fc29))
+* **pipeline:** Add dataset_remove_columns to datasets.yaml ([`9cdb2c8`](https://github.com/entelecheia/corporate-reputation/commit/9cdb2c8fd90fae12e3097858add7d6f75f745d55))
+* **pipeline:** Add new pipeline for saving datasets ([`eff2232`](https://github.com/entelecheia/corporate-reputation/commit/eff22324ca986b40f2282d00da8bda005aeffa7e))
+
+### Fix
+
+* **config:** Correct dataset_path in corprep-gpt3-sample.yaml ([`837b9d9`](https://github.com/entelecheia/corporate-reputation/commit/837b9d95378b5fae902527ade24b25e88fd998db))
+* **dependencies:** Upgrade lexikanon to 0.5.2 ([`44fa3df`](https://github.com/entelecheia/corporate-reputation/commit/44fa3df588b7a1cfbed53f8dc42d55ce8e5d379e))
+* **dependencies:** Upgrade hyfi to 1.20.1 ([`b95917d`](https://github.com/entelecheia/corporate-reputation/commit/b95917d9508b5b14fe73818c8f69c550fcd691e0))
+
 ## v0.12.2 (2023-08-04)
 
 ### Fix
