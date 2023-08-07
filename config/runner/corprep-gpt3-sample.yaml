@@ -10,7 +10,7 @@ data_load:
   split: train
 
 data_save:
-  dataset_path: ${get_original_cwd:}/workspace/datasets/abas_results/${.._config_name_}
+  dataset_path: ${get_original_cwd:}/workspace/datasets/absa_results/${.._config_name_}
 
 agent:
   output_dir: ${get_original_cwd:}/workspace/outputs/predictions/${.._config_name_}
