@@ -5,12 +5,14 @@ defaults:
   - /pipeline@similar: datasets-similar
   - /pipeline@filter: datasets-filter
   - /pipeline@dtest: datasets-test
+  - /pipeline@dsave: datasets-save
   - override /project: corprep
 
 workflow_name: corprep
 verbose: true
 pipelines:
-  - noun
-  - similar
-  - filter
+  # - noun
+  # - similar
+  # - filter
   # - dtest
+  - dsave

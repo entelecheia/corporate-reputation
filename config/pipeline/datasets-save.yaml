@@ -1,0 +1,20 @@
+defaults:
+  - datasets
+
+use_task_as_initial_object: true
+steps:
+  - uses: pipe_load
+    with:
+      dataset_path: datasets/absa_results/corprep-gpt4-sample
+      verbose: true
+  - uses: pipe_rmcols
+    with:
+      column_names: ["writers", "lastModifiedDt", "createdDt_int", "serviceUrl", "__index_level_0__"]
+    verbose: true
+  - uses: pipe_to_pandas
+    verbose: true
+  - uses: pipe_head
+    verbose: true
+  - uses: pipe_save_df
+    with:
+      data_file: datasets/absa_results/corprep-gpt4-sample.parquet
