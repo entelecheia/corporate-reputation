@@ -3,6 +3,6 @@ defaults:
 
 name: train_2019
 
-top_n: 10
-batch_size: 2
-num_workers: 5
+# top_n: 10
+batch_size: 100
+num_workers: 8
