@@ -1,5 +1,14 @@
 <!--next-version-placeholder-->
 
+## v0.14.0 (2023-08-08)
+
+### Feature
+
+* **runner:** Add new corprep-gpt4-train_2019.yaml configuration file. ([`444b8c9`](https://github.com/entelecheia/corporate-reputation/commit/444b8c96f9f13e4e01105d6dd77241bd2fc4315e))
+* **pipeline:** Add dataframe_select_columns task to datasets.yaml ([`2f796d7`](https://github.com/entelecheia/corporate-reputation/commit/2f796d715bf6f5f75c2a35ac620628aaeb94ad45))
+* **corprep.yaml:** Add datasets-filter-year to pipeline, add filter_year variable ([`dc215a7`](https://github.com/entelecheia/corporate-reputation/commit/dc215a7c74d84075fbe4a10672a7d7c714ff70b8))
+* **pipeline:** Add datasets filter configuration ([`db5f422`](https://github.com/entelecheia/corporate-reputation/commit/db5f422045e2e1b694e5beee2d4786b4196486b7))
+
 ## v0.13.0 (2023-08-07)
 
 ### Feature
