@@ -8,27 +8,31 @@ steps:
       data_files: datasets/filtered/kakao_deduped/train.parquet
       split: train
       verbose: true
-  - uses: dataframe_drop_columns
+  - uses: dataframe_select_columns
     with:
-      columns: [
-          "siteName",
-          "boardSection",
-          "cpName",
-          "nouns",
-          "createdDt_int",
-          "lastModifiedDt",
-          "include_ceo",
-          "category",
-          "serviceUrl",
-          "title",
-          "writers",
-          "cluster",
-          "duplicate",
-          "fig_filename",
-          # "createdDt",
-        ]
+      columns: ["newsId", "createdDt", "cleaned_text"]
       verbose: true
-    verbose: true
+  # - uses: dataframe_drop_columns
+  #   with:
+  #     columns: [
+  #         "siteName",
+  #         "boardSection",
+  #         "cpName",
+  #         "nouns",
+  #         "createdDt_int",
+  #         "lastModifiedDt",
+  #         "include_ceo",
+  #         "category",
+  #         "serviceUrl",
+  #         "title",
+  #         "writers",
+  #         "cluster",
+  #         "duplicate",
+  #         "fig_filename",
+  #         # "createdDt",
+  #       ]
+  #     verbose: true
+  #   verbose: true
   - uses: dataframe_print_head_and_tail
     verbose: true
   - uses: filter_and_sample_data
