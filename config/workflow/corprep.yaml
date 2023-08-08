@@ -1,18 +1,23 @@
 # @package _global_
 defaults:
   - __init__
-  - /pipeline@noun: datasets-noun
-  - /pipeline@similar: datasets-similar
-  - /pipeline@filter: datasets-filter
-  - /pipeline@dtest: datasets-test
-  - /pipeline@dsave: datasets-save
+  - /pipeline@datasets-noun: datasets-noun
+  - /pipeline@datasets-similar: datasets-similar
+  - /pipeline@datasets-filter: datasets-filter
+  - /pipeline@datasets-test: datasets-test
+  - /pipeline@datasets-save: datasets-save
+  - /pipeline@datasets-filter-year: datasets-filter-year
   - override /project: corprep
 
 workflow_name: corprep
 verbose: true
 pipelines:
-  # - noun
-  # - similar
-  # - filter
-  # - dtest
-  - dsave
+  # - datasets-noun
+  # - datasets-similar
+  # - datasets-filter
+  # - datasets-test
+  # - datasets-savedatasets-save
+  - datasets-filter-year
+
+variables:
+  filter_year: 2019

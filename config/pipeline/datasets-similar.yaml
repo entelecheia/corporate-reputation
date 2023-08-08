@@ -3,20 +3,20 @@ defaults:
 
 use_task_as_initial_object: true
 steps:
-  - uses: pipe_load
+  - uses: load_dataset_from_disk
     with:
       dataset_path: datasets/processed/kakao_nouns
       verbose: true
-  # - uses: pipe_sample
+  # - uses: sample_dataset
   #   with:
   #     sample_size: 1000
   #     randomize: true
   #     verbose: true
-  - uses: pipe_to_pandas
+  - uses: dataset_to_pandas
     verbose: true
-  - uses: pipe_head
+  - uses: dataframe_print_head_and_tail
     verbose: true
-  - uses: pipe_find_similar
+  - uses: find_similar_docs_by_clustering
     with:
       num_workers: 30
       min_num_docs: 3
@@ -35,6 +35,6 @@ steps:
       save_fig: true
       verbose: true
     verbose: true
-  - uses: pipe_save_df
+  - uses: save_dataframes
     with:
       data_file: datasets/processed/kakao_nouns_similar_6.parquet

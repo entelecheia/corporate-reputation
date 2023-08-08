@@ -3,18 +3,18 @@ defaults:
 
 use_task_as_initial_object: true
 steps:
-  - uses: pipe_load
+  - uses: load_dataset_from_disk
     with:
       dataset_path: datasets/absa_results/corprep-gpt4-sample
       verbose: true
-  - uses: pipe_rmcols
+  - uses: dataset_remove_columns
     with:
       column_names: ["writers", "lastModifiedDt", "createdDt_int", "serviceUrl", "__index_level_0__"]
     verbose: true
-  - uses: pipe_to_pandas
+  - uses: dataset_to_pandas
     verbose: true
-  - uses: pipe_head
+  - uses: dataframe_print_head_and_tail
     verbose: true
-  - uses: pipe_save_df
+  - uses: save_dataframes
     with:
       data_file: datasets/absa_results/corprep-gpt4-sample.parquet

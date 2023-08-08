@@ -1,6 +1,0 @@
-defaults:
-  - __general_external_funcs__
-
-run:
-  _target_: "lambda x: print(x.head())"
-verbose: true

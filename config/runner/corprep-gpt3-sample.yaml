@@ -6,7 +6,7 @@ name: sample
 top_n: 10
 data_load:
   path: parquet
-  data_files: ${get_original_cwd:}/workspace/datasets/filtered/kakao_deduped/${..name}.parquet
+  data_files: ${get_original_cwd:}/workspace/datasets/filtered/kakao_for_absa/${..name}.parquet
   split: train
 
 data_save:
