@@ -3,14 +3,14 @@ defaults:
 
 use_task_as_initial_object: true
 steps:
-  - uses: pipe_load_dfs
+  - uses: load_dataframes
     with:
       data_files: datasets/processed/kakao_nouns_similar_6.parquet
       split: train
       verbose: true
-  - uses: pipe_head
+  - uses: pandas_print_head
     verbose: true
-  - uses: pipe_filter
+  - uses: filter_and_sample_data
     with:
       queries:
         - "duplicate == False"

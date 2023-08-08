@@ -3,18 +3,18 @@ defaults:
 
 use_task_as_initial_object: true
 steps:
-  - uses: pipe_load_dataset
+  - uses: load_dataset
     with:
       data_dir: datasets/processed/kakao_filtered
       path: parquet
       split: train
     verbose: true
-  - uses: pipe_sample
+  - uses: sample_dataset
     with:
       sample_size: 15
       randomize: true
       verbose: true
-  - uses: pipe_tokenize
+  - uses: tokenize_dataset
     with:
       tokenizer: mecab
       # batch_size: 3
@@ -23,7 +23,7 @@ steps:
       token_col: tokenizedText
       load_from_cache_file: false
       verbose: true
-  - uses: pipe_extract
+  - uses: extract_tokens
     with:
       tokenizer: kakao
       # batch_size: 3
@@ -32,7 +32,7 @@ steps:
       nouns_only: true
       load_from_cache_file: false
       verbose: true
-  - uses: pipe_save
+  - uses: save_dataset_to_disk
     with:
       dataset_path: datasets/processed/kakao_nouns_test
     verbose: true
