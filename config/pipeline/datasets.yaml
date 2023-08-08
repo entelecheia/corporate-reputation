@@ -14,6 +14,7 @@ defaults:
   - /pipe@load_dataframes: load_dataframes
   - /pipe@dataset_remove_columns: dataset_remove_columns
   - /pipe@dataframe_drop_columns: dataframe_drop_columns
+  - /pipe@dataframe_select_columns: dataframe_select_columns
 
 use_task_as_initial_object: true
 steps:
