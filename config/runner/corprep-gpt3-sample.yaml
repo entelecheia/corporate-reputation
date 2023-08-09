@@ -3,10 +3,11 @@ defaults:
 
 _config_name_: corprep-gpt3-${.name}
 name: sample
+input_filename: ${.name}.parquet
 top_n: 10
 data_load:
   path: parquet
-  data_files: ${get_original_cwd:}/workspace/datasets/filtered/kakao_for_absa/${..name}.parquet
+  data_files: ${get_original_cwd:}/workspace/datasets/filtered/kakao_for_absa/${..input_filename}
   split: train
 
 data_save:
