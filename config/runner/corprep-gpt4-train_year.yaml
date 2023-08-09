@@ -1,0 +1,9 @@
+defaults:
+  - corprep-gpt4-sample
+
+name: train_year
+input_filename: train_${variables.filter_year}.parquet
+
+top_n:
+batch_size: 100
+num_workers: 8

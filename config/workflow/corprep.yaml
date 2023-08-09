@@ -20,4 +20,4 @@ pipelines:
   - datasets-filter-year
 
 variables:
-  filter_year: 2019
+  filter_year: 2020

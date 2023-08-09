@@ -1,8 +1,0 @@
-defaults:
-  - corprep-gpt4-sample
-
-name: train_2019
-
-# top_n: 10
-batch_size: 100
-num_workers: 8
