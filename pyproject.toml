@@ -15,7 +15,7 @@ corprep = 'corprep.__cli__:main'
 [tool.poetry.dependencies]
 python = ">=3.8.1,<3.12"
 hyfi = "^1.29.0"
-lexikanon = "^0.5.2"
+lexikanon = "^0.6.1"
 # lexikanon = { path = "../lexikanon", develop = true }
 # hyfi = { path = "../hyfi", develop = true }
 thematos = "^0.2.3"
