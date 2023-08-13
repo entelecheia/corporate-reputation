@@ -18,7 +18,7 @@ hyfi = "^1.29.0"
 lexikanon = "^0.6.1"
 # lexikanon = { path = "../lexikanon", develop = true }
 # hyfi = { path = "../hyfi", develop = true }
-thematos = "^0.2.3"
+thematos = ">=0.2.3,<0.13.0"
 hyfi-absa = "^0.3.2"
 # hyfi-absa = { path = "../hyfi-absa", develop = true }
 
