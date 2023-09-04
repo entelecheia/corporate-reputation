@@ -4,4 +4,4 @@ defaults:
 
 _config_name_: corprep-gpt3
 task: QUAD
-prompt: revision1
+prompt: revision2
