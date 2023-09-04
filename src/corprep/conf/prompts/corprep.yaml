@@ -16,7 +16,7 @@ prompts:
     base: |
       We're aiming to pull out precise information from the provided text, focusing on the reputation of a specific company. There are six key aspects we're interested in: "management", "workplace", "product & service", "social", "financial", and an additional category called "ownership", which relates to the behavior or reputation of the company's primary shareholder or owner.
       The sentiments we're focusing on fall into three types: "positive", "neutral", and "negative". Your mission is to identify all the aspect terms and their associated opinion terms present in the text. Aspect terms are sentences or phrases that specify particular characteristics or attributes of the company. Opinion terms are adjectives or phrases used to express distinct sentiments.
-      From these terms, your task is to determine the sentiment polarity, choosing from "positive", "negative", or "neutral". Importantly, we've added an extra field for the company name. So, your response should be in the format of jsonlines or a list of dictionaries, such as: 
+      From these terms, your task is to determine the sentiment polarity, choosing from "positive", "negative", or "neutral". Importantly, we've added an extra field for the company name. So, your response should be in the format of jsonlines or a list of dictionaries, such as:
       [{"company": "company name", "aspect": "management", "aspect_terms": ["management"], "opinion_terms": ["good"], "sentiment": "positive"}, ...].
       If the text does not contain any relevant details about a company, or any of the requested aspect or opinion terms, simply return an empty list, [].
     revision1: |
@@ -25,4 +25,20 @@ prompts:
       Your task is to identify all aspect terms and their corresponding opinion terms within the text. Aspect terms are sentences or phrases that delineate specific characteristics or attributes of the company or the owner. Opinion terms are adjectives or phrases that articulate distinct sentiments.
       From these terms, you need to determine the sentiment polarity, which can be "positive", "negative", or "neutral". An additional requirement is to identify the company name. Therefore, your response should be formatted as jsonlines or a list of dictionaries, such as:
       [{"company": "company name", "aspect": "management", "aspect_terms": ["management"], "opinion_terms": ["good"], "sentiment": "positive"}, ...].
+      If the text doesn't provide any pertinent information about a company or its owner, or doesn't contain any of the necessary aspect or opinion terms, simply return an empty list, [].
+    revision2: |
+      We're aiming to extract detailed information from the provided text, with a particular focus on the reputation of a specific company and its owner.
+      The key aspects we're interested in include "management", "workplace", "product & service", "social", "financial", and an additional category called "owner".
+      The "owner" aspect is concerned with the personal reputation of the individual who owns the majority of the company's shares.
+      The sentiments we're assessing fall into three types: "positive", "neutral", and "negative".
+      Performance or trading of stocks or supply and demand of stock market should not be included in any aspect.
+      Financial performance should not classified as a "product & service" aspect.
+      Your task is to identify all aspect terms and their corresponding opinion terms within the text.
+      Aspect terms are sentences or phrases that delineate specific characteristics or attributes of the company or the owner.
+      Opinion terms are adjectives or phrases that articulate distinct sentiments.
+
+      From these terms, you need to determine the sentiment polarity, which can be "positive", "negative", or "neutral".
+      An additional requirement is to identify the company name.
+      Therefore, your response should be formatted as jsonlines or a list of dictionaries, such as:
+      [{"company": "company name", "aspect": "management", "aspect_terms": ["management"], "opinion_terms": ["good"], "sentiment": "positive"}, …].
       If the text doesn't provide any pertinent information about a company or its owner, or doesn't contain any of the necessary aspect or opinion terms, simply return an empty list, [].
