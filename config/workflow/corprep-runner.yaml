@@ -10,4 +10,4 @@ tasks:
   - corprep-gpt4-train_year
 
 variables:
-  filter_year: 2020
+  filter_year: 2023
