@@ -1,5 +1,18 @@
 <!--next-version-placeholder-->
 
+## v0.15.0 (2023-09-04)
+
+### Feature
+
+* **corprep-gpt3.yaml:** Add newsId to configuration ([`623012f`](https://github.com/entelecheia/corporate-reputation/commit/623012f82412b2ef507d81e2845e87f2b360d12d))
+* **corprep:** Update text parsing instructions ([`42d7134`](https://github.com/entelecheia/corporate-reputation/commit/42d7134599bc5b52568913aee7ce7092cf0472f4))
+* **workflow:** Add corprep-runner.yaml config file ([`d9b7ff7`](https://github.com/entelecheia/corporate-reputation/commit/d9b7ff76ea49652e93a9660c5ae36a0000649f8f))
+* **config:** Add input_filename attribute to corprep-gpt3-sample.yaml, use input_filename for file path ([`6dd5b65`](https://github.com/entelecheia/corporate-reputation/commit/6dd5b653d65abecddcba9fd648b8bc6dfe628578))
+
+### Fix
+
+* **dependencies:** Upgrade hyfi to 1.32.1, lexikanon to 0.6.4 and hyfi-absa to 0.3.3 ([`82f72bb`](https://github.com/entelecheia/corporate-reputation/commit/82f72bbbbe0ba965f4c89db3b2153a50cb302ef6))
+
 ## v0.14.0 (2023-08-08)
 
 ### Feature
