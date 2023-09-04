@@ -1,5 +1,15 @@
 <!--next-version-placeholder-->
 
+## v0.16.0 (2023-09-04)
+
+### Feature
+
+* **corprep-runner:** Add corprep-gpt4-train_year agent ([`2d7e1c5`](https://github.com/entelecheia/corporate-reputation/commit/2d7e1c5c262d8abc9a10d05e1e80d6785c7cf3ae))
+
+### Fix
+
+* **dependencies:** Upgrade hyfi-absa to 0.4.0 ([`5dc8ca8`](https://github.com/entelecheia/corporate-reputation/commit/5dc8ca89df94355050f9fa50bb2c2d6a48b4b0bb))
+
 ## v0.15.0 (2023-09-04)
 
 ### Feature
