@@ -16,8 +16,8 @@ pipelines:
   # - datasets-similar
   # - datasets-filter
   # - datasets-test
-  - datasets-save
-  # - datasets-filter-year
+  # - datasets-save
+  - datasets-filter-year
 
 variables:
-  filter_year: 2019
+  filter_year: 2023
