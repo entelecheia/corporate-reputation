@@ -1211,20 +1211,20 @@ tqdm = ">=4.64.1,<5.0.0"
 
 [[package]]
 name = "hyfi-absa"
-version = "0.3.3"
+version = "0.4.0"
 description = "HyFI-ABSA is a Python package developed as a plugin for the Hydra Fast Interface (HyFI)."
 optional = false
 python-versions = ">=3.8.1,<3.12"
 files = [
-    {file = "hyfi_absa-0.3.3-py3-none-any.whl", hash = "sha256:5df7f0f201095f4d8973a80db1cfca71886b5533482bcc2aeb7f062bd824f662"},
-    {file = "hyfi_absa-0.3.3.tar.gz", hash = "sha256:3d067a2a5e6a35e64571454c4fc1f1825e0b12cb45a0d1ec0368e4f155588b83"},
+    {file = "hyfi_absa-0.4.0-py3-none-any.whl", hash = "sha256:2b9223e549ad9ebbcec0db94fea7d8731eb876e006fd0bd538a546f43915d4cf"},
+    {file = "hyfi_absa-0.4.0.tar.gz", hash = "sha256:9ebb5c19ed8e7e9ca3cebcf1d9fc6bdd7d51cca14e5f9a6760888989cf0bd781"},
 ]
 
 [package.dependencies]
 backoff = ">=2.2.1,<3.0.0"
 click = ">=8.1.3,<9.0.0"
-hyfi = ">=1.32.1,<2.0.0"
-openai = ">=0.27.8,<0.28.0"
+hyfi = ">=1.33.0,<2.0.0"
+openai = ">=0.27.8,<0.29.0"
 
 [[package]]
 name = "idna"
@@ -3366,4 +3366,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<3.12"
-content-hash = "3e41646ac1ba8e731543cd9bca81699d179b9a7f8988fb5e32a38464e3935c96"
+content-hash = "e51357dff9a88e88b46c980c72f472eda7ae8c322f1022fcaed40ad807a57b1e"

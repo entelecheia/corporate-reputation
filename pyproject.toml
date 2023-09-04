@@ -19,7 +19,7 @@ lexikanon = "^0.6.4"
 # lexikanon = { path = "../lexikanon", develop = true }
 # hyfi = { path = "../hyfi", develop = true }
 thematos = ">=0.2.3,<0.15.0"
-hyfi-absa = "^0.3.3"
+hyfi-absa = "^0.4.0"
 # hyfi-absa = { path = "../hyfi-absa", develop = true }
 
 [tool.poetry.group.dev]
