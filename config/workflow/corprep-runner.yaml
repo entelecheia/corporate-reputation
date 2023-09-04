@@ -11,3 +11,7 @@ tasks:
 
 variables:
   filter_year: 2023
+
+corprep-gpt4-train_year:
+  agent:
+    prompt: revision2
