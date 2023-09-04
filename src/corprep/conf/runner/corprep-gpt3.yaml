@@ -3,4 +3,5 @@ defaults:
   - override /agent: corprep-gpt3
 
 _config_name_: corprep-gpt3
+id_col: newsId
 text_col: cleaned_text

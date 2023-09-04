@@ -4,6 +4,6 @@ defaults:
 name: train_year
 input_filename: train_${variables.filter_year}.parquet
 
-top_n:
+top_n: 10
 batch_size: 100
 num_workers: 8
