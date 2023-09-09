@@ -1,0 +1,15 @@
+defaults:
+  - datasets
+
+use_task_as_initial_object: true
+steps:
+  - uses: convert_absa_output_to_results
+    with:
+      output_file: datasets/predictions/corprep-gpt4-train_2023/QUAD_revision2_gpt-4_20230905.jsonl
+    verbose: true
+  - uses: records_to_dataframe
+  - uses: save_dataframes
+    with:
+      data_file: datasets/absa_outputs/corprep-gpt4-train_${variables.filter_year}.parquet
+      verbose: true
+    verbose: true
