@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.17.0 (2023-09-09)
+
+### Feature
+
+* **pipeline:** Add datasets save predictions configuration ([`d29c1d2`](https://github.com/entelecheia/corporate-reputation/commit/d29c1d2e85c4539ad138c4b1db19715cd1fb2aac))
+* **config:** Add datasets-save-predictions.yaml ([`bb93396`](https://github.com/entelecheia/corporate-reputation/commit/bb9339626f63d17f87f0e0bcb794aa48adb80c1f))
+
 ## v0.16.0 (2023-09-04)
 
 ### Feature
