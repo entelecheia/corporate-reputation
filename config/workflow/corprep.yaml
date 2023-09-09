@@ -6,6 +6,7 @@ defaults:
   - /pipeline@datasets-filter: datasets-filter
   - /pipeline@datasets-test: datasets-test
   - /pipeline@datasets-save: datasets-save
+  - /pipeline@datasets-save-predictions: datasets-save-predictions
   - /pipeline@datasets-filter-year: datasets-filter-year
   - override /project: corprep
 
@@ -17,7 +18,8 @@ pipelines:
   # - datasets-filter
   # - datasets-test
   # - datasets-save
-  - datasets-filter-year
+  - datasets-save-predictions
+  # - datasets-filter-year
 
 variables:
   filter_year: 2023
