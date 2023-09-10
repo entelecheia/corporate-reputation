@@ -2,47 +2,71 @@
 
 The task aims to implement an Aspect-Based Sentiment Analysis (ABSA) pipeline using generative language models like GPT-4. This implementation covers four crucial phases: Data Preparation, Aspect Extraction, Sentiment Analysis, and Post-Processing. Each phase has its specialized sub-tasks that include data cleaning, model fine-tuning, prediction, and output formatting. The objective is to obtain an in-depth understanding of the sentiment related to multiple aspects of a company and its owner for more nuanced reputation management.
 
-## Streamlined Implementation Procedure
+## Streamlined Procedure
 
 ### Phase 1: Data Preparation
 
-1. **Data Collection**: Utilize web scraping techniques to collect data from Daum news website. Focus on text that contains information about companies and their owners.
+1. **Data Collection**
 
-2. **Data Annotation**: Use the collected data to manually label the aspects and sentiments according to the prompts. Include aspects like "management," "workplace," "product & service," "social," "financial," and "owner."
+   - **Technique**: Web scraping algorithms would crawl the Daum news website for articles specifically related to companies and their owners. The focus would be on aspects outlined in the prompts, such as "management" or "financial."
 
-3. **Data Cleaning**: Pre-process the collected data. Normalize text, handle missing values, and remove irrelevant information according to the prompt guidelines.
+2. **Data Annotation**
 
-4. **Train-Test Split**: Divide the data into training, validation, and test sets.
+   - **Procedure**: The acquired corpus would undergo a manual annotation process where experts identify and label aspects and sentiments. The aspects would be categorized as per the guideline, such as "management," "workplace," etc.
+   - **Prompt-Guided Labeling**: Ensure that the aspects and sentiments are labeled according to pre-defined prompts, to maintain a standardized data set.
+
+3. **Data Cleaning**
+
+   - **Text Normalization**: This involves transforming all text to a standard form—converting to lowercase and removing special characters or extra spaces.
+   - **Irrelevant Data Removal**: Any data points that are extraneous or not aligned with the objectives should be discarded.
+
+4. **Train-Test Split**
+   - **Stratification**: The data set would be divided into training, validation, and test subsets. Stratified sampling ensures each subset is representative of the overall data composition in terms of the aspects and sentiments.
 
 ### Phase 2: Aspect Extraction (AE)
 
-1. **Model Choice**: Utilize a generative language model like GPT-4.
+1. **Model Choice**
 
-2. **Fine-Tuning Objective Function**: Adapt the model to predict not just the next word but also whether a word or phrase is an aspect.
+   - **Rationale**: Generative models like GPT-4 have proven efficacy in complex language tasks, making them apt for the Aspect Extraction task.
+
+2. **Fine-Tuning Objective Function**
+
+   - Adapt the model to predict not just the next word but also whether a word or phrase is an aspect.
 
    $$
    \max_{\theta} \sum_{i=1}^{N} log P(x_i, y_i | x_{<i}; \theta)
    $$
 
-3. **Training**: Train the model on the labeled training dataset.
+3. **Training**
 
-4. **Validation**: Validate the model using the validation set and tweak parameters for better performance.
+   - **Data Input**: Use the labeled training set acquired in Phase 1.
+   - **LLM Embeddings**: As specified, LLM embeddings will be used to train classifiers, capitalizing on their ability to capture nuanced language features.
+
+4. **Validation**
+   - **Model Tuning**: The validation set will be used for hyperparameter tuning and to validate the model's performance metrics such as F1-score, precision, and recall.
 
 ### Phase 3: Aspect Sentiment Analysis (ASA)
 
-1. **Additional Fine-Tuning**: Further fine-tune the model to predict sentiment polarity for each extracted aspect.
+1. **Additional Fine-Tuning**
+
+   - Further fine-tune the model to predict sentiment polarity for each extracted aspect.
 
    $$
    \max_{\theta} \sum_{i=1}^{N} log P(x_i, y_i, z_i | x_{<i}, y_{<i}; \theta)
    $$
 
-2. **Training and Validation**: Use the same split data for sentiment prediction training and validation.
+2. **Training and Validation**
+
+   - **LLM Embeddings**: The LLM embeddings will be instrumental again here, to train classifiers that predict sentiment polarity for the aspects identified.
 
 ### Phase 4: Post-Processing
 
-1. **Sentiment Aggregation**: For each aspect, aggregate the sentiments if it appears multiple times.
+1. **Sentiment Aggregation**
 
-2. **Output Formatting**: Format the output into JSONlines or a list of dictionaries.
+   - **Methodology**: The identified sentiments for recurring aspects are statistically aggregated using methods like mode or mean to give a consolidated sentiment score.
+
+2. **Output Formatting**
+   - **JSONlines**: The final output would be formatted into JSONlines, ensuring that it is both human-readable and machine-parseable.
 
 ## Sample Output
 
