@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Methodology &#8212; Reputation Analysis of Companies and CEOs</title>
+    <title>Implementation &#8212; Reputation Analysis of Companies and CEOs</title>
   
   
   
@@ -85,12 +85,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'paper/methodology/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'paper/implementation/index';</script>
     <link rel="shortcut icon" href="https://assets.entelecheia.ai/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Implementation" href="../implementation/index.html" />
-    <link rel="prev" title="Literature Review" href="../literature/index.html" />
+    <link rel="next" title="Results" href="../results/index.html" />
+    <link rel="prev" title="Methodology" href="../methodology/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,8 +178,8 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../literature/index.html">Literature Review</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Methodology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../implementation/index.html">Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methodology/index.html">Methodology</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../results/index.html">Results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conclusion/index.html">Concluding Remarks</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../supplementary/index.html">Supplemental material</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -257,7 +257,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/entelecheia/corporate-reputation/edit/main/book/paper/methodology/index.md" target="_blank"
+      <li><a href="https://github.com/entelecheia/corporate-reputation/edit/main/book/paper/implementation/index.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -274,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/entelecheia/corporate-reputation/issues/new?title=Issue%20on%20page%20%2Fpaper/methodology/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/entelecheia/corporate-reputation/issues/new?title=Issue%20on%20page%20%2Fpaper/implementation/index.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -304,7 +304,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/paper/methodology/index.md" target="_blank"
+      <li><a href="../../_sources/paper/implementation/index.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -386,7 +386,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Methodology</h1>
+    <h1>Implementation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -396,8 +396,33 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-challenges-in-aspect-based-sentiment-analysis">The Challenges in Aspect-Based Sentiment Analysis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#employing-generative-language-models-in-absa">Employing Generative Language Models in ABSA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-1-data-preparation">Phase 1: Data Preparation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection">Data Collection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-annotation">Data Annotation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">Data Cleaning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-test-split">Train-Test Split</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-2-aspect-extraction">Phase 2: Aspect Extraction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-choice-and-fine-tuning">Model Choice and Fine-Tuning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training-and-validation">Training and Validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-3-aspect-sentiment-analysis">Phase 3: Aspect Sentiment Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-fine-tuning">Additional Fine-Tuning</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Training and Validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-4-post-processing">Phase 4: Post-Processing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-aggregation">Sentiment Aggregation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-formatting">Output Formatting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-and-alternative-solutions">Conclusion and Alternative Solutions</a></li>
 </ul>
             </nav>
         </div>
@@ -409,39 +434,86 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="methodology">
-<h1>Methodology<a class="headerlink" href="#methodology" title="Permalink to this heading">#</a></h1>
-<section id="the-challenges-in-aspect-based-sentiment-analysis">
-<h2>The Challenges in Aspect-Based Sentiment Analysis<a class="headerlink" href="#the-challenges-in-aspect-based-sentiment-analysis" title="Permalink to this heading">#</a></h2>
-<p>Aspect-Based Sentiment Analysis (ABSA) is an intricate sub-field of sentiment analysis, focusing on dissecting sentiments related to specific aspects within a body of text. This approach, while potentially powerful, presents several unique challenges that revolve around two central stages: Aspect Extraction (AE) and Aspect Sentiment Analysis (ASA).</p>
-<p>In the AE stage, determining accurate aspects from a text is fraught with difficulties. For instance, understanding co-occurrence relations, where words frequently appearing together are taken to represent an aspect, can lead to erroneous aspect identifications. Additionally, the task of extracting meaningful relationships based on semantic and syntactic sequences poses significant challenges due to the complexities of language and the demand for accurate hierarchical structures.</p>
-<p>In the ASA stage, the inherent interaction between data objects presents a challenge. Capturing the relevance between aspects and the sentiment-bearing terms can lead to inaccuracies when using neural network models. Furthermore, sentences containing multiple aspects necessitate more sophisticated models to manage the complexity and guarantee accuracy. Techniques such as LSTM, GRU, and deep memory networks often grapple with capturing long sequences between words and accurately distributing attention scores, leading to difficulties in handling contextual-semantic information.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="implementation">
+<h1>Implementation<a class="headerlink" href="#implementation" title="Permalink to this heading">#</a></h1>
+<p>Aspect-Based Sentiment Analysis (ABSA) has emerged as a critical tool in understanding public sentiment in granular detail. Given its applicability in various domains such as finance, healthcare, and reputation management, the need for robust ABSA frameworks is evident. This section delineates the steps for constructing an ABSA pipeline that leverages the generative pre-trained model GPT-4. The work aims to provide a detailed, step-by-step methodology that focuses on using this generative model to analyze sentiment related to distinct aspects of companies and their owners.</p>
+<section id="phase-1-data-preparation">
+<h2>Phase 1: Data Preparation<a class="headerlink" href="#phase-1-data-preparation" title="Permalink to this heading">#</a></h2>
+<section id="data-collection">
+<h3>Data Collection<a class="headerlink" href="#data-collection" title="Permalink to this heading">#</a></h3>
+<p>For a robust ABSA model, the quality of data is paramount. Web scraping algorithms target the Daum news website to harvest articles specifically discussing companies and their owners. The chosen website provides a rich corpus focusing on relevant aspects like “management,” “financial health,” and “corporate social responsibility,” among others.</p>
 </section>
-<section id="employing-generative-language-models-in-absa">
-<h2>Employing Generative Language Models in ABSA<a class="headerlink" href="#employing-generative-language-models-in-absa" title="Permalink to this heading">#</a></h2>
-<p>Generative language models, like GPT-4, hold promise for tackling the challenges associated with ABSA. These models, when adapted for ABSA tasks, can significantly mitigate difficulties related to aspect extraction and sentiment analysis.</p>
-<p>The primary function of generative language models is to estimate the probability distribution of a sequence of words. They are trained to predict the most likely subsequent word given a sequence of words. This is achieved by optimizing the following objective function:</p>
-<div class="math notranslate nohighlight">
-\[
-\max_{\theta} \sum_{i=1}^{N} log P(x_i | x_{&lt;i}; \theta)
-\]</div>
-<p>In the function above, <span class="math notranslate nohighlight">\(N\)</span> is the total number of words in the corpus, <span class="math notranslate nohighlight">\(x_i\)</span> represents the <span class="math notranslate nohighlight">\(i\)</span>-th word, <span class="math notranslate nohighlight">\(x_{&lt;i}\)</span> denotes the sequence of words before the <span class="math notranslate nohighlight">\(i\)</span>-th word, and <span class="math notranslate nohighlight">\(θ\)</span> denotes the parameters of the model.</p>
-<p>By modifying this fundamental mechanism, generative language models can be tuned to address ABSA challenges. They can be trained to predict not only the next word in the sequence but also whether a word or phrase is an aspect. In this way, the model’s objective function for the aspect extraction task can be defined as:</p>
+<section id="data-annotation">
+<h3>Data Annotation<a class="headerlink" href="#data-annotation" title="Permalink to this heading">#</a></h3>
+<p>After data acquisition, a team of domain experts annotates the text corpus assisted by a prompt-guided labeling system. Aspects such as “management” and “financials” are labeled based on pre-defined prompts. This guided annotation aims to provide a structured, standardized dataset, thereby reducing the scope of labeling errors and facilitating easier modeling downstream.</p>
+</section>
+<section id="data-cleaning">
+<h3>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this heading">#</a></h3>
+<p>Text normalization techniques convert the corpus to a standard form, including lowercasing, stripping special characters, and handling whitespace. Irrelevant data points that don’t align with the study objectives are purged to concentrate the dataset.</p>
+</section>
+<section id="train-test-split">
+<h3>Train-Test Split<a class="headerlink" href="#train-test-split" title="Permalink to this heading">#</a></h3>
+<p>Stratified sampling ensures each subset—training, validation, and test—is a representative microcosm of the overall dataset. This stratification balances the aspects and sentiments across all subsets, enabling a fair evaluation of model performance.</p>
+</section>
+</section>
+<section id="phase-2-aspect-extraction">
+<h2>Phase 2: Aspect Extraction<a class="headerlink" href="#phase-2-aspect-extraction" title="Permalink to this heading">#</a></h2>
+<section id="model-choice-and-fine-tuning">
+<h3>Model Choice and Fine-Tuning<a class="headerlink" href="#model-choice-and-fine-tuning" title="Permalink to this heading">#</a></h3>
+<p>GPT-4 is selected for its proven capabilities in complex NLP tasks. An objective function is customized to extend the model’s capabilities from text generation to aspect identification.</p>
 <div class="math notranslate nohighlight">
 \[
 \max_{\theta} \sum_{i=1}^{N} log P(x_i, y_i | x_{&lt;i}; \theta)
 \]</div>
-<p>In this function, <span class="math notranslate nohighlight">\(y_i\)</span> denotes whether the <span class="math notranslate nohighlight">\(i\)</span>-th word is an aspect. By forcing the model to predict aspects, it learns the inherent structure and semantics of aspects, thereby addressing the aspect extraction challenges.</p>
-<p>Once aspects are identified, the generative language models can be further adapted to predict sentiment polarity for each aspect. By further modifying the objective function to include sentiment polarity prediction, we get:</p>
+</section>
+<section id="training-and-validation">
+<h3>Training and Validation<a class="headerlink" href="#training-and-validation" title="Permalink to this heading">#</a></h3>
+<p>The model is trained on the annotated training set using Large Language Model (LLM) embeddings. These embeddings enable classifiers to understand nuanced language features that simple word embeddings might miss. Performance metrics like F1-score, precision, and recall are monitored during validation to tune the model parameters.</p>
+</section>
+</section>
+<section id="phase-3-aspect-sentiment-analysis">
+<h2>Phase 3: Aspect Sentiment Analysis<a class="headerlink" href="#phase-3-aspect-sentiment-analysis" title="Permalink to this heading">#</a></h2>
+<section id="additional-fine-tuning">
+<h3>Additional Fine-Tuning<a class="headerlink" href="#additional-fine-tuning" title="Permalink to this heading">#</a></h3>
+<p>The model undergoes a second fine-tuning stage to predict the sentiment polarity for each identified aspect. The objective function used for this phase is:</p>
+</section>
+</section>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \max_{\theta} \sum_{i=1}^{N} log P(x_i, y_i, z_i | x_{&lt;i}, y_{&lt;i}; \theta)
 \]</div>
-<p>Here, <span class="math notranslate nohighlight">\(z_i\)</span> represents the sentiment polarity of the <span class="math notranslate nohighlight">\(i\)</span>-th word, if it is an aspect. This adaptation allows the model to handle multiple aspects in a sentence and manage multi-aspect sentiments, thus addressing several challenges inherent in aspect sentiment analysis.</p>
-<p>For example, consider the statement: “The new software is amazing, but the CEO’s recent comments on privacy were inappropriate.” Traditional sentiment analysis might yield a mixed sentiment score without distinguishing between the sentimentsassociated with the software and the CEO’s comments. But by employing a generative language model fine-tuned for ABSA, we can overcome this limitation.</p>
-<p>Firstly, the generative model identifies and extracts the aspects within the text. Here, “new software” is associated with the company, and “CEO’s recent comments on privacy” is related to the CEO. This separation enables a granular understanding of sentiments linked to different parts of the company and its CEO.</p>
-<p>After the aspects are extracted, the generative model predicts sentiment polarity for each aspect. For “new software,” it identifies a positive sentiment from the word “amazing,” and for “CEO’s recent comments on privacy,” it detects a negative sentiment from the term “inappropriate.”</p>
-<p>In essence, this ABSA adaptation of generative language modeling provides a granular, detailed, and accurate understanding of the reputation of both the company and its CEO. By separating the sentiment scores of the company and the CEO, it enables nuanced reputation management and strategic decision-making.</p>
+</section>
+<section id="id2">
+<h2><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="id3">
+<h3>Training and Validation<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>Here, LLM embeddings remain instrumental in training classifiers that can accurately predict sentiment polarity.</p>
+</section>
+</section>
+<section id="phase-4-post-processing">
+<h2>Phase 4: Post-Processing<a class="headerlink" href="#phase-4-post-processing" title="Permalink to this heading">#</a></h2>
+<section id="sentiment-aggregation">
+<h3>Sentiment Aggregation<a class="headerlink" href="#sentiment-aggregation" title="Permalink to this heading">#</a></h3>
+<p>For recurring aspects, sentiments are statistically aggregated using methods like mode or mean to generate a single sentiment score. This aggregation aids in summarizing the general sentiment concerning specific aspects.</p>
+</section>
+<section id="output-formatting">
+<h3>Output Formatting<a class="headerlink" href="#output-formatting" title="Permalink to this heading">#</a></h3>
+<p>Finally, the extracted insights are formatted into JSONlines format, enabling both human interpretation and machine parsing.</p>
+<p><strong>Sample Output</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>[
+    {&quot;company&quot;: &quot;카카오&quot;, &quot;aspect&quot;: &quot;product &amp; service&quot;, &quot;aspect_terms&quot;: [&quot;데이터센터 화재에 따른 먹통 사태&quot;, &quot;데이터센터 화재에 따른 서비스 장애 피해지원 계획&quot;, &quot;이모티콘 총 종 제공&quot;, &quot;매출 손실 규모액에 따른 지원금 지급&quot;], &quot;opinion_terms&quot;: [&quot;보상안 발표&quot;, &quot;다양한 단체와 협의체를 구성하고 논의를 지속&quot;, &quot;직접적인 피해가 큰 경우만 별도 과정을 거쳐 개별 지원&quot;, &quot;사회적 책임 차원의 일괄 지원을 결정&quot;, &quot;안정적인 서비스를 제공하겠다는 약속&quot;], &quot;sentiment&quot;: &quot;positive&quot;},
+    {&quot;company&quot;: &quot;넥슨&quot;, &quot;aspect&quot;: &quot;social&quot;, &quot;aspect_terms&quot;: [&quot;김정주 전 회장의 가상자산 계좌가 해킹&quot;, &quot;억원어치 가상자산이 도난당한 사실&quot;], &quot;opinion_terms&quot;: [&quot;사망자의 가상자산은 제도가 없어 보호받지 못한다는 지적&quot;, &quot;논란이 일었다&quot;], &quot;sentiment&quot;: &quot;negative&quot;},
+    …
+]
+</pre></div>
+</div>
+</section>
+</section>
+<section id="conclusion-and-alternative-solutions">
+<h2>Conclusion and Alternative Solutions<a class="headerlink" href="#conclusion-and-alternative-solutions" title="Permalink to this heading">#</a></h2>
+<p>The paper describes an ABSA implementation using GPT-4, providing a nuanced understanding of sentiments related to different aspects of companies and their owners. Future iterations could explore the utilization of other generative models or include multilingual support for enhanced scalability. Automated annotation techniques could also be integrated to expedite the data preparation phase. By incorporating these elements, the model could offer even more comprehensive insights, further enriching reputation management tactics.</p>
 </section>
 </section>
 
@@ -458,7 +530,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./paper/methodology"
+            path: "./paper/implementation"
         },
         predefinedOutput: true
     }
@@ -477,20 +549,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../literature/index.html"
+       href="../methodology/index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Literature Review</p>
+        <p class="prev-next-title">Methodology</p>
       </div>
     </a>
     <a class="right-next"
-       href="../implementation/index.html"
+       href="../results/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Implementation</p>
+        <p class="prev-next-title">Results</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -512,8 +584,33 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-challenges-in-aspect-based-sentiment-analysis">The Challenges in Aspect-Based Sentiment Analysis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#employing-generative-language-models-in-absa">Employing Generative Language Models in ABSA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-1-data-preparation">Phase 1: Data Preparation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection">Data Collection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-annotation">Data Annotation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">Data Cleaning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-test-split">Train-Test Split</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-2-aspect-extraction">Phase 2: Aspect Extraction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-choice-and-fine-tuning">Model Choice and Fine-Tuning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training-and-validation">Training and Validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-3-aspect-sentiment-analysis">Phase 3: Aspect Sentiment Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-fine-tuning">Additional Fine-Tuning</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Training and Validation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-4-post-processing">Phase 4: Post-Processing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-aggregation">Sentiment Aggregation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-formatting">Output Formatting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-and-alternative-solutions">Conclusion and Alternative Solutions</a></li>
 </ul>
   </nav></div>
 
