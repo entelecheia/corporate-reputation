@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Implementation &#8212; Reputation Analysis of Companies and CEOs</title>
   
@@ -19,25 +18,25 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-examples.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
@@ -46,31 +45,31 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
     <script src="../../_static/js/hoverxref.js"></script>
     <script src="../../_static/js/tooltipster.bundle.min.js"></script>
     <script src="../../_static/js/micromodal.min.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-Q1HTTH4YZ2"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -78,16 +77,20 @@
                 gtag('js', new Date());
                 gtag('config', 'G-Q1HTTH4YZ2');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-Q1HTTH4YZ2');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'paper/implementation/index';</script>
-    <link rel="shortcut icon" href="https://assets.entelecheia.ai/favicon.png"/>
+    <link rel="icon" href="https://assets.entelecheia.ai/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Results" href="../results/index.html" />
@@ -101,10 +104,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -145,11 +147,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -177,7 +182,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Reputation Analysis of Companies and CEOs</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -446,34 +462,34 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="implementation">
-<h1>Implementation<a class="headerlink" href="#implementation" title="Permalink to this heading">#</a></h1>
+<h1>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">#</a></h1>
 <p>Aspect-Based Sentiment Analysis (ABSA) has emerged as a critical tool in understanding public sentiment in granular detail. Given its applicability in various domains such as finance, healthcare, and reputation management, the need for robust ABSA frameworks is evident. This section delineates the steps for constructing an ABSA pipeline that leverages the generative pre-trained model GPT-4. The work aims to provide a detailed, step-by-step methodology that focuses on using this generative model to analyze sentiment related to distinct aspects of companies and their owners.</p>
 <section id="phase-1-data-preparation">
-<h2>Phase 1: Data Preparation<a class="headerlink" href="#phase-1-data-preparation" title="Permalink to this heading">#</a></h2>
+<h2>Phase 1: Data Preparation<a class="headerlink" href="#phase-1-data-preparation" title="Link to this heading">#</a></h2>
 <section id="data-collection">
-<h3>Data Collection<a class="headerlink" href="#data-collection" title="Permalink to this heading">#</a></h3>
+<h3>Data Collection<a class="headerlink" href="#data-collection" title="Link to this heading">#</a></h3>
 <p>For a robust ABSA model, the quality of data is paramount. Web scraping algorithms target the Daum news website to harvest articles specifically discussing companies and their owners. The chosen website provides a rich corpus focusing on relevant aspects like “management,” “financial health,” and “corporate social responsibility,” among others.</p>
 </section>
 <section id="data-annotation">
-<h3>Data Annotation<a class="headerlink" href="#data-annotation" title="Permalink to this heading">#</a></h3>
+<h3>Data Annotation<a class="headerlink" href="#data-annotation" title="Link to this heading">#</a></h3>
 <p>After data acquisition, a team of domain experts annotates the text corpus assisted by a prompt-guided labeling system. Aspects such as “management” and “financials” are labeled based on pre-defined prompts. This guided annotation aims to provide a structured, standardized dataset, thereby reducing the scope of labeling errors and facilitating easier modeling downstream.</p>
 </section>
 <section id="data-cleaning">
-<h3>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this heading">#</a></h3>
+<h3>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Link to this heading">#</a></h3>
 <p>Text normalization techniques convert the corpus to a standard form, including lowercasing, stripping special characters, and handling whitespace. Irrelevant data points that don’t align with the study objectives are purged to concentrate the dataset.</p>
 </section>
 <section id="train-test-split">
-<h3>Train-Test Split<a class="headerlink" href="#train-test-split" title="Permalink to this heading">#</a></h3>
+<h3>Train-Test Split<a class="headerlink" href="#train-test-split" title="Link to this heading">#</a></h3>
 <p>Stratified sampling ensures each subset—training, validation, and test—is a representative microcosm of the overall dataset. This stratification balances the aspects and sentiments across all subsets, enabling a fair evaluation of model performance.</p>
 </section>
 </section>
 <section id="phase-2-aspect-extraction">
-<h2>Phase 2: Aspect Extraction<a class="headerlink" href="#phase-2-aspect-extraction" title="Permalink to this heading">#</a></h2>
+<h2>Phase 2: Aspect Extraction<a class="headerlink" href="#phase-2-aspect-extraction" title="Link to this heading">#</a></h2>
 <section id="model-choice-and-fine-tuning">
-<h3>Model Choice and Fine-Tuning<a class="headerlink" href="#model-choice-and-fine-tuning" title="Permalink to this heading">#</a></h3>
+<h3>Model Choice and Fine-Tuning<a class="headerlink" href="#model-choice-and-fine-tuning" title="Link to this heading">#</a></h3>
 <p>GPT-4 is selected for its proven capabilities in complex NLP tasks. An objective function is customized to extend the model’s capabilities from text generation to aspect identification.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -481,52 +497,52 @@ document.write(`
 \]</div>
 </section>
 <section id="training-and-validation">
-<h3>Training and Validation<a class="headerlink" href="#training-and-validation" title="Permalink to this heading">#</a></h3>
+<h3>Training and Validation<a class="headerlink" href="#training-and-validation" title="Link to this heading">#</a></h3>
 <p>The model is trained on the annotated training set using Large Language Model (LLM) embeddings. These embeddings enable classifiers to understand nuanced language features that simple word embeddings might miss. Performance metrics like F1-score, precision, and recall are monitored during validation to tune the model parameters.</p>
 </section>
 </section>
 <section id="phase-3-aspect-sentiment-analysis">
-<h2>Phase 3: Aspect Sentiment Analysis<a class="headerlink" href="#phase-3-aspect-sentiment-analysis" title="Permalink to this heading">#</a></h2>
+<h2>Phase 3: Aspect Sentiment Analysis<a class="headerlink" href="#phase-3-aspect-sentiment-analysis" title="Link to this heading">#</a></h2>
 <section id="additional-fine-tuning">
-<h3>Additional Fine-Tuning<a class="headerlink" href="#additional-fine-tuning" title="Permalink to this heading">#</a></h3>
+<h3>Additional Fine-Tuning<a class="headerlink" href="#additional-fine-tuning" title="Link to this heading">#</a></h3>
 <p>The model undergoes a second fine-tuning stage to predict the sentiment polarity for each identified aspect. The objective function used for this phase is:</p>
 </section>
 </section>
 <section id="id1">
-<h2><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \max_{\theta} \sum_{i=1}^{N} log P(x_i, y_i, z_i | x_{&lt;i}, y_{&lt;i}; \theta)
 \]</div>
 </section>
 <section id="id2">
-<h2><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <section id="id3">
-<h3>Training and Validation<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>Training and Validation<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>Here, LLM embeddings remain instrumental in training classifiers that can accurately predict sentiment polarity.</p>
 </section>
 </section>
 <section id="phase-4-post-processing">
-<h2>Phase 4: Post-Processing<a class="headerlink" href="#phase-4-post-processing" title="Permalink to this heading">#</a></h2>
+<h2>Phase 4: Post-Processing<a class="headerlink" href="#phase-4-post-processing" title="Link to this heading">#</a></h2>
 <section id="sentiment-aggregation">
-<h3>Sentiment Aggregation<a class="headerlink" href="#sentiment-aggregation" title="Permalink to this heading">#</a></h3>
+<h3>Sentiment Aggregation<a class="headerlink" href="#sentiment-aggregation" title="Link to this heading">#</a></h3>
 <p>For recurring aspects, sentiments are statistically aggregated using methods like mode or mean to generate a single sentiment score. This aggregation aids in summarizing the general sentiment concerning specific aspects.</p>
 </section>
 <section id="output-formatting">
-<h3>Output Formatting<a class="headerlink" href="#output-formatting" title="Permalink to this heading">#</a></h3>
+<h3>Output Formatting<a class="headerlink" href="#output-formatting" title="Link to this heading">#</a></h3>
 <p>Finally, the extracted insights are formatted into JSONlines format, enabling both human interpretation and machine parsing.</p>
 <p><strong>Sample Output</strong></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>[
-    {&quot;company&quot;: &quot;카카오&quot;, &quot;aspect&quot;: &quot;product &amp; service&quot;, &quot;aspect_terms&quot;: [&quot;데이터센터 화재에 따른 먹통 사태&quot;, &quot;데이터센터 화재에 따른 서비스 장애 피해지원 계획&quot;, &quot;이모티콘 총 종 제공&quot;, &quot;매출 손실 규모액에 따른 지원금 지급&quot;], &quot;opinion_terms&quot;: [&quot;보상안 발표&quot;, &quot;다양한 단체와 협의체를 구성하고 논의를 지속&quot;, &quot;직접적인 피해가 큰 경우만 별도 과정을 거쳐 개별 지원&quot;, &quot;사회적 책임 차원의 일괄 지원을 결정&quot;, &quot;안정적인 서비스를 제공하겠다는 약속&quot;], &quot;sentiment&quot;: &quot;positive&quot;},
-    {&quot;company&quot;: &quot;넥슨&quot;, &quot;aspect&quot;: &quot;social&quot;, &quot;aspect_terms&quot;: [&quot;김정주 전 회장의 가상자산 계좌가 해킹&quot;, &quot;억원어치 가상자산이 도난당한 사실&quot;], &quot;opinion_terms&quot;: [&quot;사망자의 가상자산은 제도가 없어 보호받지 못한다는 지적&quot;, &quot;논란이 일었다&quot;], &quot;sentiment&quot;: &quot;negative&quot;},
-    …
-]
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;company&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;카카오&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;aspect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;product &amp; service&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;aspect_terms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;데이터센터 화재에 따른 먹통 사태&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;데이터센터 화재에 따른 서비스 장애 피해지원 계획&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;이모티콘 총 종 제공&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;매출 손실 규모액에 따른 지원금 지급&quot;</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;opinion_terms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;보상안 발표&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;다양한 단체와 협의체를 구성하고 논의를 지속&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;직접적인 피해가 큰 경우만 별도 과정을 거쳐 개별 지원&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;사회적 책임 차원의 일괄 지원을 결정&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;안정적인 서비스를 제공하겠다는 약속&quot;</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;sentiment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;positive&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;company&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;넥슨&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;aspect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;social&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;aspect_terms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;김정주 전 회장의 가상자산 계좌가 해킹&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;억원어치 가상자산이 도난당한 사실&quot;</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;opinion_terms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;사망자의 가상자산은 제도가 없어 보호받지 못한다는 지적&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;논란이 일었다&quot;</span><span class="p">],</span><span class="w"> </span><span class="nt">&quot;sentiment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;negative&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="err">…</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="conclusion-and-alternative-solutions">
-<h2>Conclusion and Alternative Solutions<a class="headerlink" href="#conclusion-and-alternative-solutions" title="Permalink to this heading">#</a></h2>
+<h2>Conclusion and Alternative Solutions<a class="headerlink" href="#conclusion-and-alternative-solutions" title="Link to this heading">#</a></h2>
 <p>The paper describes an ABSA implementation using GPT-4, providing a nuanced understanding of sentiments related to different aspects of companies and their owners. Future iterations could explore the utilization of other generative models or include multilingual support for enhanced scalability. Automated annotation techniques could also be integrated to expedite the data preparation phase. By incorporating these elements, the model could offer even more comprehensive insights, further enriching reputation management tactics.</p>
 </section>
 </section>
@@ -587,6 +603,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -669,8 +686,8 @@ By Young Joon Lee
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
