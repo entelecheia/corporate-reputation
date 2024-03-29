@@ -1,4 +1,5 @@
 """Command line interface for corprep"""
+
 from hyfi import hyfi_main
 
 

@@ -6,7 +6,8 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows: ["lint & test"]
-    branches: [main]
+    branches:
+      - release
     types:
       - completed
 
@@ -26,7 +27,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        python-version: [3.8]
+        python-version: [3.9]
 
     # Load all steps #
     steps:
