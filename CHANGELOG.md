@@ -1,5 +1,21 @@
 <!--next-version-placeholder-->
 
+## v0.18.0 (2024-03-29)
+
+### Feature
+
+* **methodology:** Add detailed explanation for Aspect-Based Sentiment Analysis and Generative language models application ([`49f87bd`](https://github.com/entelecheia/corporate-reputation/commit/49f87bd35b78ebaa5823dcf8aba45cd0132e451f))
+
+### Fix
+
+* **dependencies:** Update python and hyfi versions; update thematos version ([`671ae1b`](https://github.com/entelecheia/corporate-reputation/commit/671ae1b7104e17ee87b046b1cbfa87a3c3dd2790))
+
+### Documentation
+
+* **implementation:** Refine methodology detail ([`685f3e3`](https://github.com/entelecheia/corporate-reputation/commit/685f3e3520e7b78f553af1b24526e313996c4593))
+* **book:** Un-comment implementation chapter in table of contents ([`c070ae7`](https://github.com/entelecheia/corporate-reputation/commit/c070ae78d1e69ef673c4856eba068f1363266404))
+* **book:** Add implementation details to the book paper ([`e98572c`](https://github.com/entelecheia/corporate-reputation/commit/e98572c88a27806730cec7a20e6da3b4a4d412e8))
+
 ## v0.17.0 (2023-09-09)
 
 ### Feature
